@@ -1,13 +1,13 @@
 import React from 'react';
 
-function Benefits() {
+function Events() {
 
     return(
         <div>
-            <h1>Benefits</h1>
+            <h1>Events</h1>
         </div>
     )
 
 }
 
-export default Benefits;
+export default Events;
