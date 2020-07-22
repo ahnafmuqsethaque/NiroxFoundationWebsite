@@ -11,4 +11,4 @@ function App() {
 
 export default App;
 
-//Let's make git work
+//Let's make GIT work
