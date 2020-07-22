@@ -56,6 +56,13 @@ function Nav() {
                 </a>
               </li>
             </Link>
+            <Link to="/signin">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Sign In
+                </a>
+              </li>
+            </Link>
           </ul>
         </div>
       </nav>
