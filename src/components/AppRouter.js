@@ -7,7 +7,8 @@ import Projects from "./Projects";
 import Reservations from "./Reservations";
 import Benefits from "./Benefits";
 import ContactUs from "./ContactUs";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import SignIn from "./SignIn";
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function AppRouter() {
   return (
@@ -16,13 +17,13 @@ function AppRouter() {
         <Nav />
         <Footer />
         <Switch>
-          <Route path="/" exact component={SignIn} />
-          <Route path="/events" component={Events} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/reservations" component={Reservations} />
-          <Route path="/benefits" component={Benefits} />
-          <Route path="/contactus" component={ContactUs} />
-          {/* <Route path="/signin" component={SignIn} /> */}
+          <Route path="/" exact component={SignIn}/>
+          <Route path="/events" component={Events}/>
+          <Route path="/projects" component={Projects}/>
+          <Route path="/reservations" component={Reservations}/>
+          <Route path="/benefits" component={Benefits}/>
+          <Route path="/contactus" component={ContactUs}/>
+          <Route path="/signin" component={SignIn}/>
         </Switch>
       </div>
     </Router>
