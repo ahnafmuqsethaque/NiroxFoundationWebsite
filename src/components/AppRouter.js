@@ -10,6 +10,7 @@ import ContactUs from "./ContactUs";
 import SignIn from "./SignIn";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Memberships from "./Memberships";
+import Application from "./Application";
 
 function AppRouter() {
   return (
@@ -26,6 +27,7 @@ function AppRouter() {
           <Route path="/contactus" component={ContactUs} />
           <Route path="/signin" component={SignIn} />
           <Route path="/memberships" component={Memberships} />
+          <Route path="/application" component={Application} />
         </Switch>
       </div>
     </Router>
