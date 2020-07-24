@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import Events from "./Events";
@@ -8,7 +8,8 @@ import Reservations from "./Reservations";
 import Benefits from "./Benefits";
 import ContactUs from "./ContactUs";
 import SignIn from "./SignIn";
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Memberships from "./Memberships";
 
 function AppRouter() {
   return (
@@ -17,17 +18,40 @@ function AppRouter() {
         <Nav />
         <Footer />
         <Switch>
-          <Route path="/" exact component={SignIn}/>
-          <Route path="/events" component={Events}/>
-          <Route path="/projects" component={Projects}/>
-          <Route path="/reservations" component={Reservations}/>
-          <Route path="/benefits" component={Benefits}/>
-          <Route path="/contactus" component={ContactUs}/>
-          <Route path="/signin" component={SignIn}/>
+          <Route path="/" exact component={SignIn} />
+          <Route path="/events" component={Events} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/reservations" component={Reservations} />
+          <Route path="/benefits" component={Benefits} />
+          <Route path="/contactus" component={ContactUs} />
+          <Route path="/signin" component={SignIn} />
+          <Route path="/memberships" component={Memberships} />
         </Switch>
       </div>
     </Router>
   );
 }
+
+// class AppRouter extends Component {
+//   render() {
+//     return (
+//       <Router>
+//         <div className="App">
+//           <Nav />
+//           <Footer />
+//           <Switch>
+//             <Route path="/" exact component={SignIn} />
+//             <Route path="/events" component={Events} />
+//             <Route path="/projects" component={Projects} />
+//             <Route path="/reservations" component={Reservations} />
+//             <Route path="/benefits" component={Benefits} />
+//             <Route path="/contactus" component={ContactUs} />
+//             <Route path="/signin" component={SignIn} />
+//           </Switch>
+//         </div>
+//       </Router>
+//     );
+//   }
+// }
 
 export default AppRouter;
