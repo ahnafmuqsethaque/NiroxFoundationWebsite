@@ -21,7 +21,13 @@ function Nav() {
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
-            <Link to="/benefits">
+          <Link to="/home">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Home
+                </a>
+              </li>
+            </Link><Link to="/benefits">
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   Benefits

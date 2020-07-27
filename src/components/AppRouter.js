@@ -28,6 +28,7 @@ function AppRouter() {
           <Route path="/signin" component={SignIn} />
           <Route path="/memberships" component={Memberships} />
           <Route path="/application" component={Application} />
+          <Route path="/home" component={Home} />
         </Switch>
       </div>
     </Router>
