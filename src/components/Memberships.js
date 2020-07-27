@@ -17,7 +17,7 @@ class Memberships extends Component {
                   content.
                 </p>
                 <a href="#" class="btn btn-primary">
-                  Go somewhere
+                  Select
                 </a>
               </div>
             </div>
@@ -32,7 +32,7 @@ class Memberships extends Component {
                   content.
                 </p>
                 <a href="#" class="btn btn-primary">
-                  Go somewhere
+                  Select
                 </a>
               </div>
             </div>
@@ -47,7 +47,7 @@ class Memberships extends Component {
                   content.
                 </p>
                 <a href="#" class="btn btn-primary">
-                  Go somewhere
+                  Select
                 </a>
               </div>
             </div>
