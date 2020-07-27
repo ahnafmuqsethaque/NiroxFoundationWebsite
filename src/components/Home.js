@@ -118,7 +118,7 @@ function Home() {
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title">Event Title</h5>
+                <h5 class="card-title">Project Title</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -137,7 +137,7 @@ function Home() {
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title">Event title</h5>
+                <h5 class="card-title">Project title</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
@@ -156,7 +156,7 @@ function Home() {
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title">Event title</h5>
+                <h5 class="card-title">Project title</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
