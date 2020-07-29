@@ -6,7 +6,15 @@ class Events extends Component {
 
         return (
             <div>
-                <h1>Events</h1>
+                <div>
+                    <img src="file:///Users/ahnafmuqsethaque/dog.jpg" width="1000" height="600" />
+                </div>
+                <div>
+                    <h1>Events 2</h1>
+                </div>
+                <div>
+                    <h1>Events 3</h1>
+                </div>
             </div>
         );
     }

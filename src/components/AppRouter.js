@@ -11,6 +11,7 @@ import SignIn from "./SignIn";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Memberships from "./Memberships";
 import Application from "./Application";
+import Header from "./Header";
 
 function AppRouter() {
   return (
@@ -28,6 +29,7 @@ function AppRouter() {
           <Route path="/signin" component={SignIn} />
           <Route path="/memberships" component={Memberships} />
           <Route path="/application" component={Application} />
+          <Route path="/header" component={Header} />
           <Route path="/home" component={Home} />
         </Switch>
       </div>
