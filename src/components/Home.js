@@ -8,6 +8,7 @@ import Slider from "react-slick";
 
 //FOOTER NOT WORKING ON THIS PAGE FOR SOME REASON
 
+
 export default class Home extends Component {
   render() {
     const settings = {

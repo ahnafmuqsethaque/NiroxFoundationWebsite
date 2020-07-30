@@ -29,3 +29,8 @@
     margin-bottom: 7%;
 }
 
+.slick-prev:before,
+.slick-next:before {
+  color: rgb(126, 143, 151)!important;
+}
+
