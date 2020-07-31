@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 
-class CreateEvent extends Component {
+class CreateProject extends Component {
   render() {
     return (
       <div>
-        <h1>Create Event</h1>
+        <h1>Create Project</h1>
         <div class="input-group input-group-sm mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-sm">
-              Event Title
+              Project Title
             </span>
           </div>
           <input
@@ -21,7 +21,7 @@ class CreateEvent extends Component {
         <div class="input-group input-group-sm mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-sm">
-              Event Description
+              Project Description
             </span>
           </div>
           <input
@@ -58,4 +58,4 @@ class CreateEvent extends Component {
   }
 }
 
-export default CreateEvent;
+export default CreateProject;
