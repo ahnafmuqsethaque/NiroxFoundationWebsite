@@ -1,16 +1,34 @@
 import React, { Component } from 'react';
 import '../styles/footer.css';
 
-class Footer extends Component {
-  render() {
-    return (
-      <footer class="footer mt-auto py-3">
-        <div id="footer" class="container">
-          <span class="text-muted"> ©2020 NIROXarts</span>
-        </div>
-      </footer>
-    );
-  }
+var style = {
+  backgroundColor: "#F8F8F8",
+  borderTop: "1px solid #E7E7E7",
+  textAlign: "center",
+  padding: "20px",
+  position: "fixed",
+  left: "0",
+  bottom: "0",
+  height: "60px",
+  width: "100%",
 }
 
-export default Footer;
+var phantom = {
+display: 'block',
+padding: '20px',
+height: '60px',
+width: '100%',
+}
+
+function Footer({ children }) {
+  return (
+      <div>
+          <div style={phantom} />
+          <div style={style}>
+              <p>NIROXarts 2020</p>
+          </div>
+      </div>
+  )
+}
+
+export default Footer
