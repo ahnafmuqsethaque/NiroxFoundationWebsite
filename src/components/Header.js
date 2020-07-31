@@ -18,7 +18,7 @@ class Header extends Component {
 
                 </header>
                 <div class="row">
-                    <div class="col-sm-4">stuff</div>
+                    <div class="col-sm-4"><h3>NIROX Sculpture Park</h3></div>
                     <div class="col-sm-8">stuff 2</div>
                 </div>
 
