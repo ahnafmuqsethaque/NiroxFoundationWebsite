@@ -17,10 +17,23 @@ class Header extends Component {
                     </div>
 
                 </header>
-                <div class="row">
+                {/* <div class="row">
                     <div class="col-sm-4"><h3>NIROX Sculpture Park</h3></div>
                     <div class="col-sm-8">stuff 2</div>
-                </div>
+                </div> */}
+
+
+                <nav class="navbar navbar-light bg-light">
+                    <h3>NIROX Sculpture Park</h3>
+                    {/* <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form> */}
+                    <span>Hello</span>
+                    <span>Hello</span>
+                </nav>
+
+
 
                 <div class="row">
                     <div class="col-sm-3">Details</div>
