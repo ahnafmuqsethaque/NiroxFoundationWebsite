@@ -8,6 +8,7 @@ import Reservations from "./Reservations";
 import Benefits from "./Benefits";
 import ContactUs from "./ContactUs";
 import SignIn from "./SignIn";
+import AdminSignIn from "./AdminSignIn";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Memberships from "./Memberships";
 import Application from "./Application";
@@ -21,6 +22,7 @@ function AppRouter() {
         <Footer />
         <Switch>
           <Route path="/" exact component={SignIn} />
+          <Route path="/adminsignin" exact component={AdminSignIn} />
           <Route path="/events" component={Events} />
           <Route path="/projects" component={Projects} />
           <Route path="/reservations" component={Reservations} />

@@ -18,6 +18,7 @@ class Reservations extends Component {
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword4">Password</label>
+                        {/* Do we really want a password here? people are already signed into the membership site. */}
                         <input type="password" class="form-control" id="inputPassword4" />
                         <small id="passwordHelpBlock" class="form-text text-muted">
                             Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.</small>

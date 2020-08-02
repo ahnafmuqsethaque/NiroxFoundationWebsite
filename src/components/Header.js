@@ -145,7 +145,7 @@ class Header extends Component {
                     <div class="col-sm-3"><h1><strong>Organizer</strong></h1></div>
                     <div class="col-sm-9"><p><h1>Nirox</h1></p></div>
                 </div>
-                
+
             </div>
         );
     }
