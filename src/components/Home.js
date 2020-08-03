@@ -18,6 +18,32 @@ export default class Home extends Component {
       slidesToShow: 3,
       slidesToScroll: 3,
       className: "slides",
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     };
 
     return (
@@ -356,14 +382,14 @@ export default class Home extends Component {
               </a>
             </div>
           </div>
-          <div class="card">
+          <div className="card test" >
             <img
               src="https://db3pap001files.storage.live.com/y4mkqerkf3YGB6L6VLzHyoyIAMXXW6gCvUCHjjkukzd3rXB2XJZVIhvfQD2T6OxxuqsuyfPnDm8S_DL9icPUI9x_hmN1JzuDQCE9NzQSb7yrGbOqqq5M9THTzJxZViHaXDM2MliSwFEYN8VfgY7viTVoXxHE_wjROtPGvQLb0jbYEBAPoJJo53SHVbL5QyFHtEQ5BapR4lTfuOC7LHQtbWy1w/NIROX%20Open%20days.jpg?psid=1&width=1810&height=1206"
               class="card-img-top"
               alt="..."
             />
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">Test card</h5>
               <p class="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.

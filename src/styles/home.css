@@ -34,3 +34,37 @@
   color: rgb(126, 143, 151)!important;
 }
 
+.card {
+    height:100%;
+    min-height: 550px;
+
+}
+    
+
+.card img {
+    height: 50vh;
+    
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1440px) {
+    .card {
+       color: rgb(207, 2, 2);
+        
+    }
+  }
+@media only screen and (max-width: 1099px) {
+    .card {
+        color: rgb(27, 2, 100);
+         
+     }
+}
+@media only screen and (max-width: 480px) {
+    .card {
+        color: rgb(207, 200, 2);
+         
+     }
+     .card img {
+        height: 30vh;
+        
+    }
+}
