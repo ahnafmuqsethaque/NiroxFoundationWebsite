@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import Events from "./Events";
-import Home from "./Home";
+import Home from "./Home/Home";
 import Projects from "./Projects";
 import Reservations from "./Reservations";
 import Benefits from "./Benefits";
