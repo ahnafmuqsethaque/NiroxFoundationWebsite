@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withAuthorization } from './Session';
 
 class CreateEvent extends Component {
   render() {
@@ -57,5 +58,6 @@ class CreateEvent extends Component {
     );
   }
 }
-
-export default CreateEvent;
+const condition = authUser => !!authUser;
+ 
+export default withAuthorization(condition)(CreateEvent);

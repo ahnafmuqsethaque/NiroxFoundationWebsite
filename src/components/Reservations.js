@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withAuthorization } from './Session';
 
 /*
 ADD VALIDATIONS!!!!
@@ -70,4 +71,6 @@ class Reservations extends Component {
 
 }
 
-export default Reservations;
+const condition = authUser => !!authUser;
+ 
+export default withAuthorization(condition)(Reservations);

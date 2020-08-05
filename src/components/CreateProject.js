@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withAuthorization } from './Session';
 
 class CreateProject extends Component {
   render() {
@@ -58,4 +59,6 @@ class CreateProject extends Component {
   }
 }
 
-export default CreateProject;
+const condition = authUser => !!authUser;
+ 
+export default withAuthorization(condition)(CreateProject);

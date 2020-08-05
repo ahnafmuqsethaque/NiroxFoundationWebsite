@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from 'react';
 import Nav from "./Nav";
 import Footer from "./Footer";
 import Events from "./Events";
@@ -9,63 +9,45 @@ import Benefits from "./Benefits";
 import ContactUs from "./ContactUs";
 import SignIn from "./SignIn";
 import AdminSignIn from "./AdminSignIn";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Memberships from "./Memberships";
 import Application from "./Application";
 import Header from "./Header";
 import CreateEvent from "./CreateEvent";
 import CreateProject from "./CreateProject";
 import SignUpPage from "./SignUp";
-
-
-function AppRouter() {
-  return (
-    <Router>
-      <div className="App">
-        <Nav />
-        <Footer />
-        <Switch>
-          <Route path="/" exact component={SignIn} exact/>
-          <Route path="/adminsignin" exact component={AdminSignIn} exact/>
-          <Route path="/events" component={Events} exact/>
-          <Route path="/projects" component={Projects} exact/>
-          <Route path="/reservations" component={Reservations} exact/>
-          <Route path="/benefits" component={Benefits} exact/>
-          <Route path="/contactus" component={ContactUs} exact/>
-          <Route path="/signin" component={SignIn} exact/>
-          <Route path="/memberships" component={Memberships} exact/>
-          <Route path="/application" component={Application} exact/>
-          <Route path="/header" component={Header} exact/>
-          <Route path="/home" component={Home} exact/>
-          <Route path="/createevent" component={CreateEvent} exact/>
-          <Route path="/createproject" component={CreateProject} exact/>
-          <Route path="/signup" component={SignUpPage} exact/>
-        </Switch>
-      </div>
-    </Router>
-  );
-}
-
-// class AppRouter extends Component {
-//   render() {
-//     return (
-//       <Router>
-//         <div className="App">
-//           <Nav />
-//           <Footer />
-//           <Switch>
-//             <Route path="/" exact component={SignIn} />
-//             <Route path="/events" component={Events} />
-//             <Route path="/projects" component={Projects} />
-//             <Route path="/reservations" component={Reservations} />
-//             <Route path="/benefits" component={Benefits} />
-//             <Route path="/contactus" component={ContactUs} />
-//             <Route path="/signin" component={SignIn} />
-//           </Switch>
-//         </div>
-//       </Router>
-//     );
-//   }
-// }
-
-export default AppRouter;
+import PasswordForget from "./PasswordForget";
+import PasswordChange from "./PasswordChange";
+import Account from "./Account";
+import { withAuthentication } from './Session';
+ 
+const AppRouter = () => (
+        <Router>
+          <div className="App">
+            <Nav />
+            <Footer />
+            <Switch>
+              <Route path="/" exact component={SignIn} exact />
+              <Route path="/adminsignin" exact component={AdminSignIn} exact />
+              <Route path="/events" component={Events} exact />
+              <Route path="/projects" component={Projects} exact />
+              <Route path="/reservations" component={Reservations} exact />
+              <Route path="/benefits" component={Benefits} exact />
+              <Route path="/contactus" component={ContactUs} exact />
+              <Route path="/signin" component={SignIn} exact />
+              <Route path="/memberships" component={Memberships} exact />
+              <Route path="/application" component={Application} exact />
+              <Route path="/header" component={Header} exact />
+              <Route path="/home" component={Home} exact />
+              <Route path="/createevent" component={CreateEvent} exact />
+              <Route path="/createproject" component={CreateProject} exact />
+              <Route path="/signup" component={SignUpPage} exact />
+              <Route path="/passwordforget" component={PasswordForget} exact />
+              <Route path="/passwordchange" component={PasswordChange} exact />
+              <Route path="/account" component={Account} exact />
+            </Switch>
+          </div>
+        </Router>
+      );
+ 
+      export default withAuthentication(AppRouter);
