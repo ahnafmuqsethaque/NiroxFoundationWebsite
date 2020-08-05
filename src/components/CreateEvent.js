@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { withAuthorization } from './Session';
 
+
+
 class CreateEvent extends Component {
+  
   render() {
     return (
       <div>

@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
  
 import { withFirebase } from './Firebase';
-import * as ROLES from './../constants/roles';
+import * as ROLES from '../constants/roles';
  
 const SignUpPage = () => (
   <div>
@@ -113,15 +113,6 @@ const INITIAL_STATE = {
           type="password"
           placeholder="Confirm Password"
         />
-        <label>
-          Admin:
-          <input
-            name="isAdmin"
-            type="checkbox"
-            checked={isAdmin}
-            onChange={this.onChangeCheckbox}
-          />
-        </label>
         <button disabled={isInvalid} type="submit">Sign Up</button>
  
         {error && <p>{error.message}</p>}

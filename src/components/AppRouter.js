@@ -15,7 +15,8 @@ import Application from "./Application";
 import Header from "./Header";
 import CreateEvent from "./CreateEvent";
 import CreateProject from "./CreateProject";
-import SignUpPage from "./SignUp";
+import SignUpPageAdmin from "./SignUpAdmin";
+import SignUpPage from "./SignUpNormal";
 import PasswordForget from "./PasswordForget";
 import PasswordChange from "./PasswordChange";
 import Account from "./Account";
@@ -42,11 +43,12 @@ const AppRouter = () => (
               <Route path="/home" component={Home} exact />
               <Route path="/createevent" component={CreateEvent} exact />
               <Route path="/createproject" component={CreateProject} exact />
-              <Route path="/signup" component={SignUpPage} exact />
+              <Route path="/signupadmin" component={SignUpPageAdmin} exact />
               <Route path="/passwordforget" component={PasswordForget} exact />
               <Route path="/passwordchange" component={PasswordChange} exact />
               <Route path="/account" component={Account} exact />
               <Route path="/admin" component={AdminPage} exact />
+              <Route path="/signupnormal" component={SignUpPage} exact />
             </Switch>
           </div>
         </Router>
