@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
  
 import { withFirebase } from './Firebase';
+import * as ROLES from './../constants/roles';
  
 const SignUpPage = () => (
   <div>
@@ -16,6 +17,7 @@ const INITIAL_STATE = {
     email: '',
     passwordOne: '',
     passwordTwo: '',
+    isAdmin: false,
     error: null,
   };
 
@@ -27,7 +29,12 @@ const INITIAL_STATE = {
   }
  
   onSubmit = event => {
-    const { username, email, passwordOne } = this.state;
+    const { username, email, passwordOne, isAdmin } = this.state;
+    const roles = {};
+ 
+    if (isAdmin) {
+      roles[ROLES.ADMIN] = ROLES.ADMIN;
+    }
  
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
@@ -38,6 +45,7 @@ const INITIAL_STATE = {
           .set({
             username,
             email,
+            roles,
           });
       })
       .then(authUser => {
@@ -54,6 +62,10 @@ const INITIAL_STATE = {
   onChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
+
+  onChangeCheckbox = event => {
+    this.setState({ [event.target.name]: event.target.checked });
+  };
  
   render() {
     const {
@@ -61,6 +73,7 @@ const INITIAL_STATE = {
         email,
         passwordOne,
         passwordTwo,
+        isAdmin,
         error,
       } = this.state;
 
@@ -100,6 +113,15 @@ const INITIAL_STATE = {
           type="password"
           placeholder="Confirm Password"
         />
+        <label>
+          Admin:
+          <input
+            name="isAdmin"
+            type="checkbox"
+            checked={isAdmin}
+            onChange={this.onChangeCheckbox}
+          />
+        </label>
         <button disabled={isInvalid} type="submit">Sign Up</button>
  
         {error && <p>{error.message}</p>}
