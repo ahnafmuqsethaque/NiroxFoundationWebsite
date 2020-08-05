@@ -92,6 +92,15 @@ const NavigationAuth = ({ authUser }) => (
             </li>
           </Link>
           )}
+          {!!authUser.roles[ROLES.ADMIN] && (
+          <Link to="/signup">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Sign Up
+              </a>
+            </li>
+          </Link>
+          )}
           <li>
             <SignOutButton />
           </li>
