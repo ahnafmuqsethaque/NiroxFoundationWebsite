@@ -15,6 +15,7 @@ import Application from "./Application";
 import Header from "./Header";
 import CreateEvent from "./CreateEvent";
 import CreateProject from "./CreateProject";
+import SignUpPage from "./SignUp";
 
 
 function AppRouter() {
@@ -38,6 +39,7 @@ function AppRouter() {
           <Route path="/home" component={Home} exact/>
           <Route path="/createevent" component={CreateEvent} exact/>
           <Route path="/createproject" component={CreateProject} exact/>
+          <Route path="/signup" component={SignUpPage} exact/>
         </Switch>
       </div>
     </Router>
