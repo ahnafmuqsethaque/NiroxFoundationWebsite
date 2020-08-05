@@ -3,17 +3,19 @@ import { Link } from "react-router-dom";
 
 import SignOutButton from "./SignOut";
 
-import { AuthUserContext } from './Session';
+import { AuthUserContext } from "./Session";
+import * as ROLES from "./../constants/roles";
 
 const Nav = ({ authUser }) => (
-  <div><AuthUserContext.Consumer>
-  {authUser =>
-    authUser ? <NavigationAuth /> : <NavigationNonAuth />
-  }
-</AuthUserContext.Consumer></div>
+  <div>
+    <AuthUserContext.Consumer>
+      {/* Possible syntax error on line 13 */}
+      {(authUser) => (authUser ? <NavigationAuth authUser={authUser} /> : <NavigationNonAuth />)}
+    </AuthUserContext.Consumer>
+  </div>
 );
 
-const NavigationAuth = () => (
+const NavigationAuth = ({ authUser }) => (
   <div>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">
@@ -81,6 +83,7 @@ const NavigationAuth = () => (
               </a>
             </li>
           </Link>
+          {!!authUser.roles[ROLES.ADMIN] && (
           <Link to="/admin">
             <li class="nav-item">
               <a class="nav-link" href="#">
@@ -88,6 +91,7 @@ const NavigationAuth = () => (
               </a>
             </li>
           </Link>
+          )}
           <li>
             <SignOutButton />
           </li>
@@ -96,8 +100,6 @@ const NavigationAuth = () => (
     </nav>
   </div>
 );
-
-
 
 const NavigationNonAuth = () => (
   <div>
