@@ -9,8 +9,8 @@ const firebaseConfig = {
   projectId: "niroxarts-website-d2250",
   storageBucket: "niroxarts-website-d2250.appspot.com",
   messagingSenderId: "335881883784",
-  appId: "1:335881883784:web:27405e6392e83a2dcc0f3d",
-  measurementId: "G-9GEL7NW32S"
+  // appId: "1:335881883784:web:27405e6392e83a2dcc0f3d",
+  // measurementId: "G-9GEL7NW32S"
 };
 
 
