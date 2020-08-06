@@ -1,93 +1,57 @@
-import React, { Component } from "react";
+import React from 'react';
 import Nav from "./Nav";
 import Footer from "./Footer";
 import Events from "./Events";
-import Home from "./Home";
+import Home from "./Home/Home";
 import Projects from "./Projects";
 import Reservations from "./Reservations";
 import Benefits from "./Benefits";
 import ContactUs from "./ContactUs";
 import SignIn from "./SignIn";
 import AdminSignIn from "./AdminSignIn";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Memberships from "./Memberships";
 import Application from "./Application";
 import Header from "./Header";
-import SignUpPage from "./SignUp"
-import { withFirebase } from './Firebase/index'
-
-class AppRouter extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      authUser: null,
-    };
-  }
-
-  componentDidMount() {
-    this.listener = this.props.firebase.auth.onAuthStateChanged(
-      authUser => {
-        authUser
-          ? this.setState({ authUser })
-          : this.setState({ authUser: null });
-      });
-  }
-
-  componentWillUnmount() {
-    this.listener();
-  }
-
-  render() {
-    return (
-      <Router>
-        <div className="App">
-          <Nav authUser={this.state.authUser} />
-          <Footer />
-          <Switch>
-            <Route path="/" exact component={SignIn} />
-            <Route path="/adminsignin" exact component={AdminSignIn} />
-            <Route path="/events" component={Events} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/reservations" component={Reservations} />
-            <Route path="/benefits" component={Benefits} />
-            <Route path="/contactus" component={ContactUs} />
-            <Route path="/signin" component={SignIn} />
-            <Route path="/memberships" component={Memberships} />
-            <Route path="/application" component={Application} />
-            <Route path="/header" component={Header} />
-            <Route path="/home" component={Home} />
-            <Route path="/signup" component={SignUpPage} exact />
-          </Switch>
-        </div>
-      </Router>
-    );
-  }
-
-}
-
-export default withFirebase( AppRouter );
-
-// class AppRouter extends Component {
-//   render() {
-//     return (
-//       <Router>
-//         <div className="App">
-//           <Nav />
-//           <Footer />
-//           <Switch>
-//             <Route path="/" exact component={SignIn} />
-//             <Route path="/events" component={Events} />
-//             <Route path="/projects" component={Projects} />
-//             <Route path="/reservations" component={Reservations} />
-//             <Route path="/benefits" component={Benefits} />
-//             <Route path="/contactus" component={ContactUs} />
-//             <Route path="/signin" component={SignIn} />
-//           </Switch>
-//         </div>
-//       </Router>
-//     );
-//   }
-// }
-
-// export default withFirebase{ AppRouter };
+import CreateEvent from "./CreateEvent";
+import CreateProject from "./CreateProject";
+import SignUpPageAdmin from "./SignUpAdmin";
+import SignUpPage from "./SignUpNormal";
+import PasswordForget from "./PasswordForget";
+import PasswordChange from "./PasswordChange";
+import Account from "./Account";
+import AdminPage from "./Admin";
+import { withAuthentication } from './Session';
+ 
+const AppRouter = () => (
+        <Router>
+          <div className="App">
+            <Nav />
+            <Footer />
+            <Switch>
+              <Route path="/" exact component={SignIn} exact />
+              <Route path="/adminsignin" exact component={AdminSignIn} exact />
+              <Route path="/events" component={Events} exact />
+              <Route path="/projects" component={Projects} exact />
+              <Route path="/reservations" component={Reservations} exact />
+              <Route path="/benefits" component={Benefits} exact />
+              <Route path="/contactus" component={ContactUs} exact />
+              <Route path="/signin" component={SignIn} exact />
+              <Route path="/memberships" component={Memberships} exact />
+              <Route path="/application" component={Application} exact />
+              <Route path="/header" component={Header} exact />
+              <Route path="/home" component={Home} exact />
+              <Route path="/createevent" component={CreateEvent} exact />
+              <Route path="/createproject" component={CreateProject} exact />
+              <Route path="/signupadmin" component={SignUpPageAdmin} exact />
+              <Route path="/passwordforget" component={PasswordForget} exact />
+              <Route path="/passwordchange" component={PasswordChange} exact />
+              <Route path="/account" component={Account} exact />
+              <Route path="/admin" component={AdminPage} exact />
+              <Route path="/signupnormal" component={SignUpPage} exact />
+            </Switch>
+          </div>
+        </Router>
+      );
+ 
+      export default withAuthentication(AppRouter);
