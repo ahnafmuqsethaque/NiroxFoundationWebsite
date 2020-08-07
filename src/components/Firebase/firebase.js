@@ -33,6 +33,12 @@ class Firebase {
   doPasswordUpdate = (password) =>
     this.auth.currentUser.updatePassword(password);
 
+    // *** Auth API ***
+ 
+  doCreateEventWithTitleAndDescription = (title, description) =>
+  this.auth.createEventWithTitleAndDescription(title, description);
+
+
   // *** Merge Auth and DB User API *** //
 
   onAuthUserListener = (next, fallback) =>
@@ -67,6 +73,12 @@ class Firebase {
   user = (uid) => this.db.ref(`users/${uid}`);
 
   users = () => this.db.ref("users");
+
+  // *** Event API ***
+
+  event = (eventid) => this.db.ref(`events/${eventid}`);
+
+  events = () => this.db.ref("events");
 }
 
 export default Firebase;

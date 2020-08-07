@@ -13,7 +13,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Memberships from "./Memberships";
 import Application from "./Application";
 import Header from "./Header";
-import CreateEvent from "./CreateEvent";
+import CreateEventPage from "./CreateEvent";
 import CreateProject from "./CreateProject";
 import SignUpPageAdmin from "./SignUpAdmin";
 import SignUpPage from "./SignUpNormal";
@@ -41,7 +41,7 @@ const AppRouter = () => (
               <Route path="/application" component={Application} exact />
               <Route path="/header" component={Header} exact />
               <Route path="/home" component={Home} exact />
-              <Route path="/createevent" component={CreateEvent} exact />
+              <Route path="/createevent" component={CreateEventPage} exact />
               <Route path="/createproject" component={CreateProject} exact />
               <Route path="/signupadmin" component={SignUpPageAdmin} exact />
               <Route path="/passwordforget" component={PasswordForget} exact />
