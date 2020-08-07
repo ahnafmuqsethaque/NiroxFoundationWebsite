@@ -34,8 +34,8 @@ class SignUpFormBase extends Component {
         const roles = {};
 
         if (isAdmin) {
-            //   roles[ROLES.ADMIN] = ROLES.ADMIN;
-            roles.push(ROLES.ADMIN);
+            roles[ROLES.ADMIN] = ROLES.ADMIN;
+            // roles.push(ROLES.ADMIN);
         }
 
         this.props.firebase
@@ -144,7 +144,7 @@ const SignUpForm = compose(
 )(SignUpFormBase);
 
 const condition = authUser =>
-    authUser && !authUser.roles[ROLES.ADMIN];
+    authUser && !!authUser.roles[ROLES.ADMIN];
 
 export default compose(
     withAuthorization(condition),

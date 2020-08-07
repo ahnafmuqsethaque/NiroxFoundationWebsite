@@ -33,8 +33,8 @@ class SignUpFormBase extends Component {
         const roles = {};
 
         if (isAdmin) {
-            //   roles[ROLES.ADMIN] = ROLES.ADMIN;
-            roles.push(ROLES.ADMIN);
+            roles[ROLES.ADMIN] = ROLES.ADMIN;
+            // roles.push(ROLES.ADMIN);
         }
 
         this.props.firebase
@@ -114,18 +114,15 @@ class SignUpFormBase extends Component {
                     type="password"
                     placeholder="Confirm Password"
                 />
-
                 <label>
                     Admin:
-                    <input
+          <input
                         name="isAdmin"
                         type="checkbox"
                         checked={isAdmin}
                         onChange={this.onChangeCheckbox}
                     />
                 </label>
-
-
                 <button disabled={isInvalid} type="submit">Sign Up</button>
 
                 {error && <p>{error.message}</p>}
