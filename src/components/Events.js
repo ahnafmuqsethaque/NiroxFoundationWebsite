@@ -12,6 +12,7 @@ class Events extends Component {
                 </div>
                 <div>
                     <h1>Events 2</h1>
+                    <p>event desc....</p>
                 </div>
                 <div>
                     <h1>Events 3</h1>
@@ -21,6 +22,7 @@ class Events extends Component {
     }
 
 }
+
 
 const condition = authUser => !!authUser;
  
