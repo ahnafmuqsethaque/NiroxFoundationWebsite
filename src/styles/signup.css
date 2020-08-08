@@ -1,0 +1,15 @@
+input {
+    margin-top: 2%;
+}
+
+.card {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.btn {
+    margin-top: 5%;
+    margin-bottom: 3%;
+}

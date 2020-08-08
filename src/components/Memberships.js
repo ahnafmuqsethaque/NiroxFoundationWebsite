@@ -16,8 +16,8 @@ class Memberships extends Component {
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
-                <a href="#" class="btn btn-primary">
-                  Select
+                <a href="/application" class="btn btn-primary">
+                  Join Today!
                 </a>
               </div>
             </div>
@@ -31,8 +31,8 @@ class Memberships extends Component {
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
-                <a href="#" class="btn btn-primary">
-                  Select
+                <a href="/application" class="btn btn-primary">
+                  Join Today!
                 </a>
               </div>
             </div>
@@ -46,8 +46,8 @@ class Memberships extends Component {
                   With supporting text below as a natural lead-in to additional
                   content.
                 </p>
-                <a href="#" class="btn btn-primary">
-                  Select
+                <a href="/application" class="btn btn-primary">
+                  Join Today!
                 </a>
               </div>
             </div>

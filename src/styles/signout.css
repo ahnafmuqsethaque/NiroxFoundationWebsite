@@ -1,0 +1,22 @@
+.btnso {
+  margin-top: 1%;
+  margin-bottom: 0.5%;
+  border-radius: 4px;
+  background-color: rgb(167, 197, 197); /* Green */
+  border: none;
+  color: white;
+  padding: 4px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.btnso {
+    transition-duration: 0.4s;
+  }
+  
+.btnso:hover {
+    background-color: rgba(162, 190, 190, 0.5); /* Green */
+    color: rgb(138, 143, 143);
+  }

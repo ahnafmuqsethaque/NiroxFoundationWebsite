@@ -1,17 +1,16 @@
 import React, { Component } from "react";
-import { withAuthorization } from './Session';
+import { withAuthorization } from "./Session";
 
-
+import "../styles/create.css";
 
 class CreateEvent extends Component {
-  
   render() {
     return (
       <div>
         <h1>Create Event</h1>
-        <div class="input-group input-group-sm mb-3">
+        <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-sm">
+            <span class="input-group-text" id="inputGroup-sizing-default">
               Event Title
             </span>
           </div>
@@ -19,7 +18,7 @@ class CreateEvent extends Component {
             type="text"
             class="form-control"
             aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-sm"
+            aria-describedby="inputGroup-sizing-default"
           />
         </div>
         <div class="input-group input-group-sm mb-3">
@@ -56,11 +55,13 @@ class CreateEvent extends Component {
             </span>
           </div>
         </div>
-        <button type="button" class="btn btn-secondary">Add</button>
+        <button type="button" class="btn btn-secondary">
+          Add
+        </button>
       </div>
     );
   }
 }
-const condition = authUser => !!authUser;
- 
+const condition = (authUser) => !!authUser;
+
 export default withAuthorization(condition)(CreateEvent);
