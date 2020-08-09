@@ -26,7 +26,6 @@ const AppRouter = () => (
         <Router>
           <div className="App">
             <Nav />
-            <Footer />
             <Switch>
               <Route path="/" exact component={SignIn} exact />
               <Route path="/events" component={Events} exact />
@@ -48,6 +47,7 @@ const AppRouter = () => (
               <Route path="/admin" component={AdminPage} exact />
               <Route path="/signupnormal" component={SignUpPage} exact />
             </Switch>
+            <Footer />
           </div>
         </Router>
       );

@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 
 import SignOutButton from "./SignOut";
 
+import '../styles/nav.css';
+
 import { AuthUserContext } from "./Session";
 import * as ROLES from "./../constants/roles";
 
 const Nav = ({ authUser }) => (
-  <div>
+  <div class="nav">
     <AuthUserContext.Consumer>
       {/* Possible syntax error on line 13 */}
       {(authUser) => (authUser ? <NavigationAuth authUser={authUser} /> : <NavigationNonAuth />)}
