@@ -14,6 +14,23 @@
 
 
 
+@media only screen and (max-width: 480px) {
+  .navbar {
+    background-color: white;
+    color: black!important;
+    transition:500ms ease;
+  }
+
+  .nav {
+    margin-bottom: 115px;
+    
+  }
+  .navbar-light .navbar-brand{
+    color: black!important;
+}
+  }
+
+
 
 
 

@@ -140,13 +140,13 @@ const NavigationNonAuth = () => (
               </a>
             </li>
           </Link>
-          <Link to="/memberships">
+          {/* <Link to="/memberships">
             <li class="nav-item">
               <a class="nav-link" href="#">
                 Memberships
               </a>
             </li>
-          </Link>
+          </Link> */}
           <Link to="/application">
             <li class="nav-item">
               <a class="nav-link" href="#">
