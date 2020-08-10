@@ -1,3 +1,11 @@
 .nav {
   margin-bottom: 55px;
 }
+.navbar {
+  background:transparent;
+}
+
+.navbar.scrolled {
+  background-color: white!important;
+  transition:500ms ease;
+}

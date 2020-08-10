@@ -17,9 +17,10 @@ const Nav = ({ authUser }) => (
   </div>
 );
 
+
 const NavigationAuth = ({ authUser }) => (
   <div>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
       <a class="navbar-brand" href="#">
         Nirox Foundation
       </a>
