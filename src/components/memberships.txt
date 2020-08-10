@@ -1,0 +1,5 @@
+{
+    gold: "Gold members get exclusive access to golden features such as ....",
+    silver: "Silver members get exclusive access to silver features such as ....",
+    bronze: "Bronze members get exclusive access to bronze features such as ....",
+}

@@ -23,16 +23,6 @@ class CreateEvent extends Component {
 
     componentDidMount() {
         this.setState({ loading: true });
-        // console.log(this.state.loading);
-        // console.log(this.state.nirox);
-
-        // this.props.firebase.nirox().on('value', snap => {
-        //     const temp = snap.val();
-        // });
-        // this.setState({
-        //     loading: false,
-        //     nirox: temp,
-        // });
 
 
         this.props.firebase.nirox().on('value', snapshot => {

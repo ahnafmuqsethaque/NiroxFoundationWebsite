@@ -79,6 +79,7 @@ class Firebase {
 
   users = () => this.db.ref("users");
   nirox = () => this.db.ref("nirox");
+  memberships = () => this.db.ref("memberships");
 }
 
 export default Firebase;
