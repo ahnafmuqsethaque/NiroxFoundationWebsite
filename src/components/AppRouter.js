@@ -8,7 +8,6 @@ import Reservations from "./Reservations";
 import Benefits from "./Benefits";
 import ContactUs from "./ContactUs";
 import SignIn from "./SignIn";
-import AdminSignIn from "./AdminSignIn";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Memberships from "./Memberships";
 import Application from "./Application";
@@ -27,10 +26,8 @@ const AppRouter = () => (
         <Router>
           <div className="App">
             <Nav />
-            <Footer />
             <Switch>
               <Route path="/" exact component={SignIn} exact />
-              <Route path="/adminsignin" exact component={AdminSignIn} exact />
               <Route path="/events" component={Events} exact />
               <Route path="/projects" component={Projects} exact />
               <Route path="/reservations" component={Reservations} exact />
@@ -50,6 +47,7 @@ const AppRouter = () => (
               <Route path="/admin" component={AdminPage} exact />
               <Route path="/signupnormal" component={SignUpPage} exact />
             </Switch>
+            <Footer />
           </div>
         </Router>
       );

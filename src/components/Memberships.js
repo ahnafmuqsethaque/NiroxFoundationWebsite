@@ -52,8 +52,8 @@ class Memberships extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Types of Memberships</h1>
+      <div >
+        <h1 class="head">Types of Memberships</h1>
         <div class="row">
           <div class="col-sm-4" id="gold">
             <div class="card">
@@ -64,8 +64,8 @@ class Memberships extends Component {
                 {this.state.loading && "loading ... "}
                   {goldP}
                 </p>
-                <a href="#" class="btn btn-primary">
-                  Select
+                <a href="/application" class="btn btn-primary">
+                  Join Today!
                 </a>
               </div>
             </div>
@@ -79,8 +79,8 @@ class Memberships extends Component {
                   {this.state.loading && "loading ... "}
                   {silverP}
                 </p>
-                <a href="#" class="btn btn-primary">
-                  Select
+                <a href="/application" class="btn btn-primary">
+                  Join Today!
                 </a>
               </div>
             </div>
@@ -94,8 +94,8 @@ class Memberships extends Component {
                 {this.state.loading && "loading ... "}
                   {bronzeP}
                 </p>
-                <a href="#" class="btn btn-primary">
-                  Select
+                <a href="/application" class="btn btn-primary">
+                  Join Today!
                 </a>
               </div>
             </div>
