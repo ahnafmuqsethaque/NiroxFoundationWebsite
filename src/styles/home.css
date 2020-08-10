@@ -1,7 +1,9 @@
+
+
 #carouselExampleCaptions {
   margin-left: 0%;
   margin-right: 0%;
-  margin-top: 0%;
+  margin-top: -70px;
   margin-bottom: 10%;
   max-height: 10%;
 }
@@ -31,6 +33,14 @@
 .slick-next:before {
   color: rgb(126, 143, 151) !important;
 }
+
+.card {
+  background: transparent;
+  outline: none
+}
+
+
+
 /* .card {
   height:100%;
   min-height: 550px;
