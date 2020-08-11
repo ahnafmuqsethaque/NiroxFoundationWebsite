@@ -17,10 +17,11 @@ const Nav = ({ authUser }) => (
   </div>
 );
 
+
 const NavigationAuth = ({ authUser }) => (
   <div>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="/home">
         Nirox Foundation
       </a>
       <button
@@ -34,15 +35,8 @@ const NavigationAuth = ({ authUser }) => (
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <Link to="/home">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Home
-              </a>
-            </li>
-          </Link>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav ">
           {!authUser.roles[ROLES.ADMIN] && (
           <Link to="/benefits">
             <li class="nav-item">
@@ -146,13 +140,13 @@ const NavigationNonAuth = () => (
               </a>
             </li>
           </Link>
-          <Link to="/memberships">
+          {/* <Link to="/memberships">
             <li class="nav-item">
               <a class="nav-link" href="#">
                 Memberships
               </a>
             </li>
-          </Link>
+          </Link> */}
           <Link to="/application">
             <li class="nav-item">
               <a class="nav-link" href="#">

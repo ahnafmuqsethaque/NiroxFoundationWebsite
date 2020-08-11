@@ -1,3 +1,50 @@
 .nav {
   margin-bottom: 55px;
+  
+}
+.navbar {
+  background:transparent;
+}
+
+.navbar.scrolled {
+  background-color: white!important;
+  color: black!important;
+  transition:500ms ease;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+  .navbar {
+    background-color: white;
+    color: black!important;
+    transition:500ms ease;
+  }
+
+  .nav {
+    margin-bottom: 115px;
+    
+  }
+  .navbar-light .navbar-brand{
+    color: black!important;
+}
+  }
+
+
+
+
+
+
+
+/* Scroll color options */
+.navbar-light.scrolled .navbar-brand{
+  color: black;
+} 
+
+/* .navbar-light .nav-item .nav-link{
+        color: #ffffff;
+}  */
+
+.navbar-light .navbar-brand{
+        color: #ffffff
 }

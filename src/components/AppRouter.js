@@ -9,7 +9,7 @@ import Benefits from "./Benefits";
 import ContactUs from "./ContactUs";
 import SignIn from "./SignIn";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Memberships from "./Memberships";
+// import Memberships from "./Memberships";
 import Application from "./Application";
 import Header from "./Header";
 import CreateEvent from "./CreateEvent";
@@ -34,7 +34,7 @@ const AppRouter = () => (
               <Route path="/benefits" component={Benefits} exact />
               <Route path="/contactus" component={ContactUs} exact />
               <Route path="/signin" component={SignIn} exact />
-              <Route path="/memberships" component={Memberships} exact />
+              {/* <Route path="/memberships" component={Memberships} exact /> */}
               <Route path="/application" component={Application} exact />
               <Route path="/header" component={Header} exact />
               <Route path="/home" component={Home} exact />

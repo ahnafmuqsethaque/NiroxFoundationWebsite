@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import "../../styles/home.css";
 
 class MemberInfo extends Component {
-    render() {
-
-
-        return (
-            <div>
-               <div
+  render() {
+    return (
+      <div>
+        <div
           id="carouselExampleCaptions"
           className="carousel slide"
           data-ride="carousel"
@@ -81,10 +79,9 @@ class MemberInfo extends Component {
             <span class="sr-only">Next</span>
           </a>
         </div>
-            </div>
-        );
-    }
-
+      </div>
+    );
+  }
 }
 
 export default MemberInfo;
