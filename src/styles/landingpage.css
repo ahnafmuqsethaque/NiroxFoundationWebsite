@@ -1,0 +1,129 @@
+/* .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+} */
+
+/* 
+  Based from this article from Divya Manian - 
+  http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+:before,
+:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  background-color: rgb(236, 196, 149);
+}
+
+.wrapper {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.title {
+  font-size: 2em;
+  position: relative;
+  margin: 0 auto 1em;
+  padding: 1em 1em 0.25em 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.title:after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 240px;
+  height: 4px;
+  margin-left: -120px;
+  content: "";
+  background-color: #fff;
+}
+
+/* Clip text element */
+.clip-text {
+  font-size: 6em;
+  font-weight: bold;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  margin: 0.25em;
+  padding: 0.5em 0.75em;
+  text-align: center;
+  /* Color fallback */
+  color: #fff;
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.clip-text:before,
+.clip-text:after {
+  position: absolute;
+  content: "";
+}
+
+/* Background */
+.clip-text:before {
+  z-index: -2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: inherit;
+}
+
+/* Text Background (black zone) */
+.clip-text:after {
+  position: absolute;
+  z-index: -1;
+  top: 0.125em;
+  right: 0.125em;
+  bottom: 0.125em;
+  left: 0.125em;
+  background-color: rgb(236, 196, 149);
+}
+
+/* Change the background position to display letter when the black zone isn't here */
+.clip-text--no-textzone:before {
+  background-position: -0.75em 0;
+}
+
+.clip-text--no-textzone:after {
+  content: none;
+}
+
+/* Use Background-size cover for photo background and no-repeat background */
+.clip-text--cover,
+.clip-text--cover:before {
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* Background image from http://thepatternlibrary.com/ and http://lorempixel.com */
+.clip-text_one {
+  background-image: url(https://db3pap001files.storage.live.com/y4mamXGDp0YXp3x0PKFjdkYY5XYhfDpI72S4w0j5RLBIC9tL2YTT_yyq6vgWp0XDQq4Hn7AVgOFr3c6k3MPgGh0rFA3S9lsE30wYqnJ5ruxYvnz21s9vSBYpxGhQd2QNMn4K3hxc_RVivNvOHT2yMqjmqSm71_fD0BhhXejwA9sGePpOU-MbosmxQpnDJMk3B5scqCDJI5eOsAr2nP6iFAbJA/NIROX-0328.jpg?psid=1&width=927&height=618);
+}

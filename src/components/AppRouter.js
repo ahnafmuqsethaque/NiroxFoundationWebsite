@@ -9,7 +9,6 @@ import Benefits from "./Benefits";
 import ContactUs from "./ContactUs";
 import SignIn from "./SignIn";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import Memberships from "./Memberships";
 import Application from "./Application";
 import Header from "./Header";
 import CreateEvent from "./CreateEvent";
@@ -20,6 +19,7 @@ import PasswordForget from "./PasswordForget";
 import PasswordChange from "./PasswordChange";
 import Account from "./Account";
 import AdminPage from "./Admin";
+import LandingPage from "./LandngPage";
 import { withAuthentication } from './Session';
  
 const AppRouter = () => (
@@ -34,7 +34,6 @@ const AppRouter = () => (
               <Route path="/benefits" component={Benefits} exact />
               <Route path="/contactus" component={ContactUs} exact />
               <Route path="/signin" component={SignIn} exact />
-              {/* <Route path="/memberships" component={Memberships} exact /> */}
               <Route path="/application" component={Application} exact />
               <Route path="/header" component={Header} exact />
               <Route path="/home" component={Home} exact />
@@ -46,6 +45,7 @@ const AppRouter = () => (
               <Route path="/account" component={Account} exact />
               <Route path="/admin" component={AdminPage} exact />
               <Route path="/signupnormal" component={SignUpPage} exact />
+              <Route path="/landingpage" component={LandingPage} exact />
             </Switch>
             <Footer />
           </div>
