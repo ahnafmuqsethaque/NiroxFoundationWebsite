@@ -18,6 +18,7 @@ const Nav = ({ authUser }) => (
 );
 
 
+
 const NavigationAuth = ({ authUser }) => (
   <div>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light">
