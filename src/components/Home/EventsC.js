@@ -7,6 +7,8 @@ import Slider from "react-slick";
 
 import "../../styles/home.css";
 
+import "../../styles/signout.css";
+
 class EventsC extends Component {
     render() {
         const settings = {
@@ -60,7 +62,7 @@ class EventsC extends Component {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="/events" class="btn btn-primary">
+              <a href="/events" class="btnh">
                 Go somewhere
               </a>
             </div>
@@ -78,7 +80,7 @@ class EventsC extends Component {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="/events" class="btn btn-primary">
+              <a href="/events" class="btnh">
                 Go somewhere
               </a>
             </div>
@@ -95,7 +97,7 @@ class EventsC extends Component {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="/events" class="btn btn-primary">
+              <a href="/events" class="btnh">
                 Go somewhere
               </a>
             </div>
@@ -112,7 +114,7 @@ class EventsC extends Component {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="/events" class="btn btn-primary">
+              <a href="/events" class="btnh">
                 Go somewhere
               </a>
             </div>
@@ -129,7 +131,7 @@ class EventsC extends Component {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="/events" class="btn btn-primary">
+              <a href="/events" class="btnh">
                 Go somewhere
               </a>
             </div>
@@ -146,7 +148,7 @@ class EventsC extends Component {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="/events" class="btn btn-primary">
+              <a href="/events" class="btnh">
                 Go somewhere
               </a>
             </div>
@@ -163,7 +165,7 @@ class EventsC extends Component {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="/events" class="btn btn-primary">
+              <a href="/events" class="btnh">
                 Go somewhere
               </a>
             </div>
@@ -180,7 +182,7 @@ class EventsC extends Component {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="/events" class="btn btn-primary">
+              <a href="/events" class="btnh">
                 Go somewhere
               </a>
             </div>
