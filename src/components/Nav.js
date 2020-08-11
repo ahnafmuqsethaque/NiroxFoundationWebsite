@@ -117,7 +117,7 @@ const NavigationAuth = ({ authUser }) => (
 
 const NavigationNonAuth = () => (
   <div>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light ">
       <a class="navbar-brand" href="/landingpage">
         Nirox Foundation
       </a>

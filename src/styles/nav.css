@@ -6,16 +6,16 @@
 }
 
 .navbar-light .nav-item .nav-link {
-  color: black;
+  color: rgb(79, 84, 85);
 }
 
 .navbar-light .navbar-brand {
-  color: black !important;
+  color: rgb(79, 84, 85) !important;
 }
 
 .navbar.scrolled {
   background-color: rgb(236, 196, 149) !important;
-  color: black !important;
+  color: rgb(79, 84, 85) !important;
   transition: 500ms ease;
 }
 
