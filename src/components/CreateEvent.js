@@ -7,6 +7,11 @@ import { compose } from 'recompose';
 
 import "../styles/create.css";
 
+const INITIAL_STATE = {
+  title: '',
+  description: '',
+};
+
 class CreateEvent extends Component {
 
   constructor(props) {
@@ -16,47 +21,50 @@ class CreateEvent extends Component {
     //this.database = this.app.database().ref().child('nirox');
     // doing w/ higher order fns -----END
     this.state = {
-      loading: false,
-      nirox: "hi",
+    
+      events: {...INITIAL_STATE},
     }
 
   }
 
   componentDidMount() {
-    this.setState({ loading: true });
+    //this.setState({ loading: true });
+    // let data = {
+    //   title: "hello",
+    //   description: "hello world, welcome to Nirox"
+    // }
+
+    
+    this.setState({
+      events: {...INITIAL_STATE}
+    })
 
 
-    this.props.firebase.nirox().on('value', snapshot => {
-      const temp = snapshot.val();
-
-      this.setState({
-        nirox: temp,
-        loading: false,
-      });
-    });
   }
 
-
-
-  // doing w/ higher order fns ----START
-  // this.database.on('value', snap => {
-  //     this.setState({
-  //         nirox: snap.val(),
-  //     });
-  // });
-  // doing w/ higher order fns ----START
-
-
-  componentWillUnmount() {
-    this.props.firebase.nirox().off();
+  onClick = (event) => {
+    this.props.firebase.events().push(this.state.events);
+    event.preventDefault();
   }
 
+  onChange = (event) => {
+    const {name, value} = event.target;
+    this.setState(prevState => {
+      return {
+          events: {
+             ...prevState.events,
+              [name]: value,
+          }
+      }
+  });
+    
+  }
 
 
 
 
   render() {
-    const { nirox, loading } = this.state;
+    const { events } = this.state;
     return (
       <div>
         <h1>Create Event</h1>
@@ -68,7 +76,10 @@ class CreateEvent extends Component {
           </div>
           <input
             type="text"
+            name="title"
             class="form-control"
+            onChange={this.onChange}
+            value={events.title}
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-default"
           />
@@ -81,12 +92,18 @@ class CreateEvent extends Component {
           </div>
           <input
             type="text"
+            name="description"
+            onChange={this.onChange}
+            value={events.description}
             class="form-control"
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-sm"
           />
         </div>
         <div class="input-group mb-3">
+          {/* <p>{this.state.events.title}</p>
+          <br/>
+          <p>{this.state.events.description}</p> */}
           <div class="custom-file">
             <input
               type="file"
@@ -100,7 +117,7 @@ class CreateEvent extends Component {
               aria-describedby="inputGroupFileAddon02"
             >
               Choose file
-              </label>
+              </label> 
           </div>
           <div class="input-group-append">
             <span class="input-group-text" id="inputGroupFileAddon02">
@@ -108,7 +125,7 @@ class CreateEvent extends Component {
               </span>
           </div>
         </div>
-        <button type="button" class="btn btn-secondary">
+        <button type="button" class="btn btn-secondary" onClick={this.onClick}>
           Add
           </button>
       </div>

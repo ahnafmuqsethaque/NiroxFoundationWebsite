@@ -1,6 +1,38 @@
 import React, { Component } from 'react';
+import { withFirebase } from "./Firebase";
 
 class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            loading: false,
+            events: {}
+        }
+    }
+
+    componentDidMount() {
+        this.setState({ loading: true });
+        this.props.firebase.events().on('value', snapshot => {
+            const idArr = Object.keys(snapshot.val());
+            const randID = idArr[0];
+            console.log(snapshot.val()[randID]);
+            this.setState({
+                loading: false,
+                events: snapshot.val()[randID],
+            })
+            // idArr.forEach((id) => {
+            // events.id
+            // })
+
+        })
+        
+
+    }
+
+    componentWillUnmount() {
+        this.props.firebase.events().off();
+    }
+
     render() {
 
 
@@ -89,8 +121,9 @@ class Header extends Component {
 
                     <div class="col-sm-8">
 
-                        <p>Unathi &amp; Friends at NIROX Sculpture Park</p>
-                        <p><br /></p><h4><strong>NEW DATE - SUNDAY 9 AUGUST 2020</strong></h4><h4><strong>WOMEN'S DAY</strong></h4>
+                         <p>Unathi &amp; Friends at NIROX Sculpture Park</p>
+                <p>{this.state.events.description}</p>
+                        {/*<p><br /></p><h4><strong>NEW DATE - SUNDAY 9 AUGUST 2020</strong></h4><h4><strong>WOMEN'S DAY</strong></h4>
                         <p><br /></p><p>Sunday 9 August 2020 - Women's Day</p>
                         <p>Cradle of Humankind, Gauteng</p>
                         <p><br /></p>
@@ -126,7 +159,7 @@ class Header extends Component {
                             ensure the performance, in the event of inclement weather any change in plans will be communicated.
                                      No refunds.</p>
                         <p>Children must be under adult supervision at all times. Entry to the park is at your own risk.</p>
-                        <p>NIROX is not responsible for any loss, injury or damage.</p>
+                        <p>NIROX is not responsible for any loss, injury or damage.</p> */}
                     </div>
 
                     {/* end adding paragraph*/}
@@ -139,7 +172,7 @@ class Header extends Component {
 
                 <div class="row">
                     <div class="col-sm-3"><h1><strong>Information</strong></h1></div>
-                    <div class="col-sm-9"><p>extra info goes here</p></div>
+                    <div class="col-sm-9"><p>{this.state.events.title}</p></div>
                 </div>
                 <div class="row">
                     <div class="col-sm-3"><h1><strong>Organizer</strong></h1></div>
@@ -152,4 +185,4 @@ class Header extends Component {
 
 }
 
-export default Header;
+export default withFirebase(Header);
