@@ -2,7 +2,7 @@
   margin-bottom: 55px;
 }
 .navbar {
-  background: transparent;
+  background-color: transparent;
 }
 
 .navbar-light .nav-item .nav-link {
@@ -14,14 +14,14 @@
 }
 
 .navbar.scrolled {
-  background-color: rgb(236, 196, 149) !important;
+  background-color: #FAFAFA !important;
   color: rgb(79, 84, 85) !important;
   transition: 500ms ease;
 }
 
 @media only screen and (max-width: 480px) {
   .navbar {
-    background-color: rgb(236, 196, 149);
+    background-color: #FAFAFA;
     color: black !important;
     transition: 500ms ease;
   }
@@ -44,5 +44,5 @@
 }  */
 
 .navbar-light .navbar-brand {
-  color: #ffffff;
+  color: black;
 }

@@ -7,6 +7,7 @@ const eventID = urlParams.get('eventId');
 
 
 class Header extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -61,7 +62,7 @@ class Header extends Component {
                     />
                 </div>
                 <div class="column" id="info">
-                    <h1 >{title}</h1>
+                    <h1 class="breathe">{title}</h1>
                     <p>Date: {date} </p>
                     <p>Time: {time} </p>
                     <p>Price: {price} </p>
@@ -217,6 +218,8 @@ class Header extends Component {
     //         </div>
     //     );
     // }
+
+
 }
 
 export default withFirebase(Header);

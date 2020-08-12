@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import SignOutButton from "./SignOut";
 
-import '../styles/nav.css';
+import "../styles/nav.css";
 
 import { AuthUserContext } from "./Session";
 import * as ROLES from "./../constants/roles";
@@ -12,18 +12,22 @@ const Nav = ({ authUser }) => (
   <div class="nav">
     <AuthUserContext.Consumer>
       {/* Possible syntax error on line 13 */}
-      {(authUser) => (authUser ? <NavigationAuth authUser={authUser} /> : <NavigationNonAuth />)}
+      {(authUser) =>
+        authUser ? (
+          <NavigationAuth authUser={authUser} />
+        ) : (
+          <NavigationNonAuth />
+        )
+      }
     </AuthUserContext.Consumer>
   </div>
 );
-
-
 
 const NavigationAuth = ({ authUser }) => (
   <div>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light">
       <a class="navbar-brand" href="/home">
-        Nirox Foundation
+      Nirox Foundation
       </a>
       <button
         class="navbar-toggler"
@@ -36,17 +40,21 @@ const NavigationAuth = ({ authUser }) => (
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarNavDropdown"
+      >
         <ul class="navbar-nav ">
           {!authUser.roles[ROLES.ADMIN] && (
-          <Link to="/benefits">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Benefits
-              </a>
-            </li>
-          </Link>
+            <Link to="/benefits">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Benefits
+                </a>
+              </li>
+            </Link>
           )}
+          {!authUser.roles[ROLES.ADMIN] && (
           <Link to="/reservations">
             <li class="nav-item">
               <a class="nav-link" href="#">
@@ -54,14 +62,15 @@ const NavigationAuth = ({ authUser }) => (
               </a>
             </li>
           </Link>
+          )}
           {!authUser.roles[ROLES.ADMIN] && (
-          <Link to="/contactus">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Contact Us
-              </a>
-            </li>
-          </Link>
+            <Link to="/contactus">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Contact Us
+                </a>
+              </li>
+            </Link>
           )}
           <Link to="/account">
             <li class="nav-item">
@@ -71,40 +80,40 @@ const NavigationAuth = ({ authUser }) => (
             </li>
           </Link>
           {!!authUser.roles[ROLES.ADMIN] && (
-          <Link to="/admin">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Admin
-              </a>
-            </li>
-          </Link>
+            <Link to="/admin">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Admin
+                </a>
+              </li>
+            </Link>
           )}
           {!!authUser.roles[ROLES.ADMIN] && (
-          <Link to="/signupadmin">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Sign Up
-              </a>
-            </li>
-          </Link>
+            <Link to="/signupadmin">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Sign Up
+                </a>
+              </li>
+            </Link>
           )}
           {!!authUser.roles[ROLES.ADMIN] && (
-          <Link to="/createevent">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Create Event
-              </a>
-            </li>
-          </Link>
+            <Link to="/createevent">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Create Event
+                </a>
+              </li>
+            </Link>
           )}
           {!!authUser.roles[ROLES.ADMIN] && (
-          <Link to="/createproject">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Create Project
-              </a>
-            </li>
-          </Link>
+            <Link to="/createproject">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Create Project
+                </a>
+              </li>
+            </Link>
           )}
           <li>
             <SignOutButton />

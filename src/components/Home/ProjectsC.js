@@ -45,7 +45,7 @@ class ProjectsC extends Component {
         };
     return (
     <div>
-        <h2>Projects</h2>
+        <h2 class="headerstyle">Projects</h2>
         <Slider {...settings}>
           <div class="card">
             <img

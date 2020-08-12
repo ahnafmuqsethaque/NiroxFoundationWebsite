@@ -136,8 +136,8 @@ class EventsC extends Component {
 
 
     return (
-      <div>
-        <h2>Events</h2>
+    <div>
+<h2 class="headerstyle">Events</h2>
         <Slider {...settings}>
           <div id="eventsDiv">
 

@@ -79,7 +79,7 @@ class CreateEvent extends Component {
               Event Title
               </span>
           </div>
-          <input
+          <textarea
             type="text"
             name="title"
             class="form-control"
@@ -95,7 +95,7 @@ class CreateEvent extends Component {
               Brief description
               </span>
           </div>
-          <input
+          <textarea
             type="text"
             name="brief"
             onChange={this.onChange}

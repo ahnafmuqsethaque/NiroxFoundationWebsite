@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import '../styles/benefits.css';
+
 class Benefits extends Component {
 
     constructor(props) {
@@ -8,7 +10,6 @@ class Benefits extends Component {
             loading: false,
         }
     }
-
 
     // componentDidMount() {
     //     this.setState({loading : true});
@@ -30,12 +31,13 @@ class Benefits extends Component {
     render() {
 
 
-        return (
+        return(
             <div>
-                <h1>Benefits</h1>
+                <h1 class="headline" >Benefits</h1>
             </div>
         )
     }
+
 
 }
 
