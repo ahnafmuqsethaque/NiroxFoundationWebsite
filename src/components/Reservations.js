@@ -9,17 +9,42 @@ check the bottom of the page: https://getbootstrap.com/docs/4.5/components/forms
 class Reservations extends Component {
   render() {
     return (
-      <div>
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdE_Od_3-UXhSEGjoREok-B_lr2jV9XOQn1UMpQpCgYlZ_LwA/viewform?embedded=true"
-          width="640"
-          height="378"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-        >
-          Loading…
-        </iframe>
+      <div class="card">
+        <h1 class="headline">Reservation</h1>
+        <form>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Name</label>
+            <input type="text" class="form-control" id="nameinput" />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">
+              Event you're signing up for
+            </label>
+            <input type="text" class="form-control" id="event" />
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Number of Guests Attending</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Reserve
+          </button>
+        </form>
       </div>
     );
   }

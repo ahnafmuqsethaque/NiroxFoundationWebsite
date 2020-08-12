@@ -9,7 +9,7 @@ import { withFirebase } from './Firebase';
 import '../styles/signin.css';
  
 const SignInPage = () => (
-  <div>
+  <div class="center">
     <h1>Sign In</h1>
     <SignInForm />
     <PasswordForgetLink />
@@ -74,7 +74,7 @@ class SignInFormBase extends Component {
           type="password"
           placeholder="Password"
         />
-        <button class="btn btn-lg btn-primary btn-block" disabled={isInvalid} type="submit">
+        <button class="btnsi" disabled={isInvalid} type="submit">
           Sign In
         </button>
  

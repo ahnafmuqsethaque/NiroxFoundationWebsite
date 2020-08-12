@@ -7,64 +7,99 @@ import Slider from "react-slick";
 
 import "../../styles/home.css";
 
+import "../../styles/signout.css";
+import { withFirebase } from "../Firebase";
+
 class EventsC extends Component {
-    render() {
-        const settings = {
-          dots: true,
-          infinite: true,
-          speed: 500,
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          className: "slides",
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: true
-              }
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                initialSlide: 2
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
-            }
-          ]
-        };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: false,
+      events: []
+    }
+
+  }
+
+  componentDidMount() {
+    this.setState({ loading: true });
+    this.props.firebase.events().on('value', snapshot => {
+      const idArr = Object.keys(snapshot.val());
+      const randID = idArr[0];
+      console.log(snapshot.val()[randID]);
+      this.setState({
+        loading: false,
+        events: snapshot.val()[randID],
+      })
+      // idArr.forEach((id) => {
+      // events.id
+      // })
+
+    })
+
+  }
+
+  componentWillUnmount() {
+    this.props.firebase.events().off();
+  }
+
+  render() {
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      className: "slides",
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    };
     return (
-    <div>
-<h2>Events</h2>
+      <div>
+        <h2>Events</h2>
         <Slider {...settings}>
           <div class="practice">
-          <div class="card">
-            <img
-              src="https://db3pap001files.storage.live.com/y4mpCT2Ujjn8R2nnSTyIopkWktGGndRyAzbV2_dOxC2fHdsKTZ80iGEC-_OHeTc3peRY1EQLV8rrnRukMJNjYHVYt9tj3FgUmGLzjcJYl3zIJmWJvw9CQsOUgaQ_VTvtRp9Skje1P4GJB3xFkODK2JGgFd8xlro5EOws07yx8FyIUdpe4qtTP-TFWR_bVETEJIkKDLdIZd4xHQnNEcxVOk9og/2018-09-02%20Jazz%20in%20the%20Cradle%20%40%20NIROX%20JSP-141.jpg?psid=1&width=1809&height=1206"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+            <div class="card">
+              <img
+                src="https://db3pap001files.storage.live.com/y4mpCT2Ujjn8R2nnSTyIopkWktGGndRyAzbV2_dOxC2fHdsKTZ80iGEC-_OHeTc3peRY1EQLV8rrnRukMJNjYHVYt9tj3FgUmGLzjcJYl3zIJmWJvw9CQsOUgaQ_VTvtRp9Skje1P4GJB3xFkODK2JGgFd8xlro5EOws07yx8FyIUdpe4qtTP-TFWR_bVETEJIkKDLdIZd4xHQnNEcxVOk9og/2018-09-02%20Jazz%20in%20the%20Cradle%20%40%20NIROX%20JSP-141.jpg?psid=1&width=1809&height=1206"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
               </p>
-              <a href="/events" class="btn btn-primary">
-                Go somewhere
+                <a href="/events" class="btnh">
+                  Go somewhere
               </a>
+              </div>
             </div>
-          </div>
           </div>
           <div class="card">
             <img
@@ -78,7 +113,7 @@ class EventsC extends Component {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="/events" class="btn btn-primary">
+              <a href="/events" class="btnh">
                 Go somewhere
               </a>
             </div>
@@ -95,7 +130,7 @@ class EventsC extends Component {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="/events" class="btn btn-primary">
+              <a href="/events" class="btnh">
                 Go somewhere
               </a>
             </div>
@@ -112,7 +147,7 @@ class EventsC extends Component {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="/events" class="btn btn-primary">
+              <a href="/events" class="btnh">
                 Go somewhere
               </a>
             </div>
@@ -129,7 +164,7 @@ class EventsC extends Component {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="/events" class="btn btn-primary">
+              <a href="/events" class="btnh">
                 Go somewhere
               </a>
             </div>
@@ -146,7 +181,7 @@ class EventsC extends Component {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="/events" class="btn btn-primary">
+              <a href="/events" class="btnh">
                 Go somewhere
               </a>
             </div>
@@ -163,7 +198,7 @@ class EventsC extends Component {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="/events" class="btn btn-primary">
+              <a href="/events" class="btnh">
                 Go somewhere
               </a>
             </div>
@@ -180,7 +215,7 @@ class EventsC extends Component {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="/events" class="btn btn-primary">
+              <a href="/events" class="btnh">
                 Go somewhere
               </a>
             </div>
@@ -203,9 +238,9 @@ class EventsC extends Component {
             </div>
           </div>
         </Slider>
-    </div>
+      </div>
     )
   }
 }
 
-export default EventsC;
+export default withFirebase(EventsC);

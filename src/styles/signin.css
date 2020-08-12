@@ -1,3 +1,7 @@
+.center {
+  margin-top: 13.5%;
+}
+
 .form-signin {
     width: 100%;
     max-width: 330px;
@@ -27,5 +31,34 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
+
+  .btnsi {
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+    border-radius: 4px;
+    background-color: rgb(167, 197, 197); /* Green */
+    border: none;
+    color: white;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+  }
+  
+  .btnsi {
+      transition-duration: 0.4s;
+    }
+    
+  .btnsi:hover {
+      background-color: rgba(162, 190, 190); /* Green */
+      color: rgb(138, 143, 143);
+    }
+
+    .btnsi:disabled {
+      background-color: rgb(167, 197, 197, 0.5); /* Green */
+      color: rgb(138, 143, 143);
+    }
+  
   
   

@@ -18,6 +18,7 @@ const Nav = ({ authUser }) => (
 );
 
 
+
 const NavigationAuth = ({ authUser }) => (
   <div>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light">
@@ -116,8 +117,8 @@ const NavigationAuth = ({ authUser }) => (
 
 const NavigationNonAuth = () => (
   <div>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light ">
+      <a class="navbar-brand" href="/landingpage">
         Nirox Foundation
       </a>
       <button
@@ -140,13 +141,6 @@ const NavigationNonAuth = () => (
               </a>
             </li>
           </Link>
-          {/* <Link to="/memberships">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Memberships
-              </a>
-            </li>
-          </Link> */}
           <Link to="/application">
             <li class="nav-item">
               <a class="nav-link" href="#">
