@@ -47,7 +47,6 @@ const AppRouter = () => (
               <Route path="/signupnormal" component={SignUpPage} exact />
               <Route path="/landingpage" component={LandingPage} exact />
             </Switch>
-            <Footer />
           </div>
         </Router>
       );

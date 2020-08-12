@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { withAuthorization } from "./Session";
 
+import '../styles/reservations.css';
+
 /*
 ADD VALIDATIONS!!!!
 check the bottom of the page: https://getbootstrap.com/docs/4.5/components/forms/
@@ -41,7 +43,7 @@ class Reservations extends Component {
               <option>5</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" class="btnr">
             Reserve
           </button>
         </form>

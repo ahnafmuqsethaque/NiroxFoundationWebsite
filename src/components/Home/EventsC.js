@@ -47,7 +47,7 @@ class EventsC extends Component {
         };
     return (
     <div>
-<h2>Events</h2>
+<h2 class="headerstyle">Events</h2>
         <Slider {...settings}>
           <div class="practice">
           <div class="card">

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import '../styles/passwordforget.css';
+import '../styles/account.css';
  
 import { withFirebase } from './Firebase';
  
@@ -58,7 +59,7 @@ class PasswordForgetFormBase extends Component {
           type="text"
           placeholder="Email Address"
         />
-        <button disabled={isInvalid} type="submit">
+        <button class="btnpw" disabled={isInvalid} type="submit">
           Reset My Password
         </button>
  

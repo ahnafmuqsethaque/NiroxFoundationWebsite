@@ -29,9 +29,11 @@ body {
 }
 
 body {
-  font-family: "Oswald", sans-serif;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
   color: rgb(79, 84, 85);
-  background-color: rgb(236, 196, 149);
+  
 }
 
 .wrapper {
@@ -102,7 +104,7 @@ body {
   right: 0.125em;
   bottom: 0.125em;
   left: 0.125em;
-  background-color: rgb(236, 196, 149);
+  background-color: #f1ede8;
 }
 
 /* Change the background position to display letter when the black zone isn't here */

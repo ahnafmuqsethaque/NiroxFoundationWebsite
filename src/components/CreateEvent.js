@@ -14,7 +14,7 @@ class CreateEvent extends Component {
               Event Title
             </span>
           </div>
-          <input
+          <textarea
             type="text"
             class="form-control"
             aria-label="Sizing example input"
@@ -27,7 +27,7 @@ class CreateEvent extends Component {
               Event Description
             </span>
           </div>
-          <input
+          <textarea
             type="text"
             class="form-control"
             aria-label="Sizing example input"

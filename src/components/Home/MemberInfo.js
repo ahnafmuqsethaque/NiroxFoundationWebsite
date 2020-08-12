@@ -3,66 +3,43 @@ import "../../styles/home.css";
 
 class MemberInfo extends Component {
   render() {
+    
     return (
       <div>
         <div
-          id="carouselExampleCaptions"
-          className="carousel slide"
+          id="carouselExampleFade"
+          class="carousel slide carousel-fade"
           data-ride="carousel"
         >
-          <ol class="carousel-indicators">
-            <li
-              data-target="#carouselExampleCaptions"
-              data-slide-to="0"
-              class="active"
-            ></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-          </ol>
           <div class="carousel-inner">
-            <div class="carousel-item active img-fluid">
-              <img
+            <div class="carousel-item active">
+            <img
                 src="https://db3pap001files.storage.live.com/y4mamXGDp0YXp3x0PKFjdkYY5XYhfDpI72S4w0j5RLBIC9tL2YTT_yyq6vgWp0XDQq4Hn7AVgOFr3c6k3MPgGh0rFA3S9lsE30wYqnJ5ruxYvnz21s9vSBYpxGhQd2QNMn4K3hxc_RVivNvOHT2yMqjmqSm71_fD0BhhXejwA9sGePpOU-MbosmxQpnDJMk3B5scqCDJI5eOsAr2nP6iFAbJA/NIROX-0328.jpg?psid=1&width=1854&height=1236"
                 id="first"
                 class="d-block w-100"
                 alt="..."
               />
-              <div class="carousel-caption d-md-block">
-                <h5>Member Info Fact 1</h5>
-                <p>
-                  Nulla vitae elit libero, a pharetra augue mollis interdum.
-                </p>
-              </div>
             </div>
             <div class="carousel-item">
-              <img
-                src="https://db3pap001files.storage.live.com/y4mfxOjtvm1jkWQF2PqfRUgUb9qXNX1ECi1l98Qfp4WfONk6m6M_70nspXU7BjGn-c0m-ZX0AFhfa3PdoXcHwo0vJizxWUdMihmHK1C9mvorR5SnJNnBlkHYAIHqKKIRavMshv51MiGEcV64nS1AbBJPlwtoDBvrAuQYXTdlHFob1GCDcFutXBN36oVNQglf8cKLdzP262EgR6TKOfnIs-0Hw/5ECA9C42-27B9-49F4-9106-52A615AFF4B0_1_105_c.jpeg?psid=1&width=1355&height=581"
+            <img
+                src="https://5p2dbq.dm.files.1drv.com/y4m4OFzENump0tDTmR4qWNy-d6zxFJ5iupeoyZYJ4Km4MTVMoIPfA2w2VKzlHQnrm1mSK-VFGH-iSp1W2s8Hv1Vuvlo95flpCT0vE8yR_Ur1nEkcrkNZfegg7yTut9HovcziCJ4lW48w5paLTGZ3SBjfJUfVhkaQsm-g9p4IWWxJcCGWpKPK0feFZdJcai8GGz8jKdfbv8dR8nOTNtjYWTBSNgXVbh_R9HaguK9y0p-p7w/DSC_0292.JPG?psid=1"
+                id="first"
                 class="d-block w-100"
                 alt="..."
               />
-              <div class="carousel-caption d-md-block">
-                <h5>Member Info Fact 2</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
             </div>
             <div class="carousel-item">
-              <img
-                src="https://db3pap001files.storage.live.com/y4mfxOjtvm1jkWQF2PqfRUgUb9qXNX1ECi1l98Qfp4WfONk6m6M_70nspXU7BjGn-c0m-ZX0AFhfa3PdoXcHwo0vJizxWUdMihmHK1C9mvorR5SnJNnBlkHYAIHqKKIRavMshv51MiGEcV64nS1AbBJPlwtoDBvrAuQYXTdlHFob1GCDcFutXBN36oVNQglf8cKLdzP262EgR6TKOfnIs-0Hw/5ECA9C42-27B9-49F4-9106-52A615AFF4B0_1_105_c.jpeg?psid=1&width=1355&height=581"
+            <img
+                src="https://5p2dbq.dm.files.1drv.com/y4m8_uK4h1I-4vxaES37xz6_UGAMgd7xKoy1_Ut_28RAMWWmVAB4B39Plhx65bzkXObM7tq96pAkXPqmcJo9B1chf0LcYAe7KzqU-sn9VQcjqT8TItpHBygqu-2vjBVtpKZFaNpgyYl0Fb90HUImr2Q-GxSFworAhZ3oixDgyECeRLDt7z72Oamz4I_Wi6akSYXeWrTVghKU-Z2MUTBRxYUqwxDJHsvmgv5JWUrbzBRZb4/DSC_0183.JPG?psid=1"
+                id="first"
                 class="d-block w-100"
                 alt="..."
               />
-              <div class="carousel-caption d-md-block">
-                <h5>Member Info Fact 3</h5>
-                <p>
-                  Praesent commodo cursus magna, vel scelerisque nisl
-                  consectetur.
-                </p>
-              </div>
             </div>
           </div>
-          <a
+          {/* <a
             class="carousel-control-prev"
-            href="#carouselExampleCaptions"
+            href="#carouselExampleFade"
             role="button"
             data-slide="prev"
           >
@@ -71,13 +48,13 @@ class MemberInfo extends Component {
           </a>
           <a
             class="carousel-control-next"
-            href="#carouselExampleCaptions"
+            href="#carouselExampleFade"
             role="button"
             data-slide="next"
           >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-          </a>
+          </a> */}
         </div>
       </div>
     );

@@ -1,4 +1,9 @@
-
+body {
+  background-color: #fafafa;
+}
+h2 {
+  font-size: 30px;
+}
 
 #carouselExampleCaptions {
   margin-left: 0%;
@@ -22,11 +27,15 @@
   margin-bottom: 5%;
 }
 
+.carousel-inner {
+  margin-top: -70px;
+  margin-bottom: 10%;
+}
 .slides {
   margin-left: 7%;
   margin-right: 7%;
   margin-top: 2%;
-  margin-bottom: 7%;
+  margin-bottom: 15%;
 }
 
 .slick-prev:before,
@@ -34,9 +43,29 @@
   color: rgb(126, 143, 151) !important;
 }
 
+.headerstyle {
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
 .card {
   background: transparent;
-  outline: none;
+  border: none;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.card-title {
+  font-size: 16px;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.card-text {
+  font-size: 11px;
 }
 
 .btnh {
@@ -50,20 +79,17 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 11px;
 }
 
 .btnh {
-    transition-duration: 0.4s;
-  }
-  
+  transition-duration: 0.4s;
+}
+
 .btnh:hover {
-    background-color: rgb(91, 113, 128); /* Green */
-    color: rgb(59, 61, 61);
-  }
-
-
-
+  background-color: rgb(91, 113, 128); /* Green */
+  color: rgb(59, 61, 61);
+}
 
 /* .card {
   height:100%;

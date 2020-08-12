@@ -13,7 +13,7 @@ class Header extends Component {
           />
         </div>
         <div class="column" id="info">
-          <h1 >Event Title</h1>
+          <h1 class="breathe" >Event Title</h1>
           <p>Date: XXX </p>
           <p>Time: XXX </p>
           <p>Price: XXX </p>
