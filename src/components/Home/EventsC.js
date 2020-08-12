@@ -16,26 +16,76 @@ class EventsC extends Component {
     super(props);
     this.state = {
       loading: false,
-      events: []
+      events: {}
     }
 
   }
 
   componentDidMount() {
+    let idArr = [];
     this.setState({ loading: true });
     this.props.firebase.events().on('value', snapshot => {
-      const idArr = Object.keys(snapshot.val());
-      const randID = idArr[0];
-      console.log(snapshot.val()[randID]);
-      this.setState({
-        loading: false,
-        events: snapshot.val()[randID],
-      })
-      // idArr.forEach((id) => {
-      // events.id
-      // })
+      console.log()
+      console.log(snapshot.val());
+        idArr = Object.keys(snapshot.val());
+        this.setState((prevState) => {
+          return {
+            ...prevState,
+            events: snapshot.val(),
+          }
+        });
+        const eventsDiv = document.getElementById("eventsDiv");
+        idArr.forEach((id) => {
 
-    })
+          const {
+            title,
+            brief,
+            description,
+            imgsrc,
+            date,
+            time,
+            price,
+            organizer,
+          } = this.state.events[id];
+
+          let divEl = document.createElement("div");
+          //divEl.setAttribute("class", "card");
+          divEl.innerHTML = `
+          <div class="card">
+              <img
+              src=${imgsrc}
+              class="card-img-top"
+              alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title" eventID=${id}>${title}</h5>
+              <p class="card-text">
+                ${brief}
+                </p>
+              <a href="/header/?eventId=${id}" class="btnh" eventId=${id}>
+                Go somewhere
+                </a>
+              </div >
+          </div>
+        `
+        eventsDiv.appendChild(divEl);
+        })
+    });
+
+  
+    // this.props.firebase.events().on('value', snapshot => {
+    //   const idArr = Object.keys(snapshot.val());
+    //   const randID = idArr[0];
+    //   console.log(snapshot.val()[randID]);
+    //   this.setState({
+    //     loading: false,
+    //     events: snapshot.val()[randID],
+    //   })
+    // idArr.forEach((id) => {
+    // events.id
+    // })
+
+    // })
 
   }
 
@@ -43,7 +93,9 @@ class EventsC extends Component {
     this.props.firebase.events().off();
   }
 
+
   render() {
+
     const settings = {
       dots: true,
       infinite: true,
@@ -78,29 +130,37 @@ class EventsC extends Component {
         }
       ]
     };
+
+
+
+
+
     return (
       <div>
         <h2>Events</h2>
         <Slider {...settings}>
-          <div class="practice">
-            <div class="card">
-              <img
-                src="https://db3pap001files.storage.live.com/y4mpCT2Ujjn8R2nnSTyIopkWktGGndRyAzbV2_dOxC2fHdsKTZ80iGEC-_OHeTc3peRY1EQLV8rrnRukMJNjYHVYt9tj3FgUmGLzjcJYl3zIJmWJvw9CQsOUgaQ_VTvtRp9Skje1P4GJB3xFkODK2JGgFd8xlro5EOws07yx8FyIUdpe4qtTP-TFWR_bVETEJIkKDLdIZd4xHQnNEcxVOk9og/2018-09-02%20Jazz%20in%20the%20Cradle%20%40%20NIROX%20JSP-141.jpg?psid=1&width=1809&height=1206"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-          </p>
-                <a href="/events" class="btnh">
-                  Go somewhere
-          </a>
-              </div>
+          <div id="eventsDiv">
+
+          </div>
+           {/* <div class="practice"> 
+          <div class="card">
+            <img
+              src="https://db3pap001files.storage.live.com/y4mpCT2Ujjn8R2nnSTyIopkWktGGndRyAzbV2_dOxC2fHdsKTZ80iGEC-_OHeTc3peRY1EQLV8rrnRukMJNjYHVYt9tj3FgUmGLzjcJYl3zIJmWJvw9CQsOUgaQ_VTvtRp9Skje1P4GJB3xFkODK2JGgFd8xlro5EOws07yx8FyIUdpe4qtTP-TFWR_bVETEJIkKDLdIZd4xHQnNEcxVOk9og/2018-09-02%20Jazz%20in%20the%20Cradle%20%40%20NIROX%20JSP-141.jpg?psid=1&width=1809&height=1206"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+                </p>
+              <a href="/events" class="btnh">
+                Go somewhere
+                </a>
             </div>
           </div>
+           </div> 
           <div class="card">
             <img
               src="https://db3pap001files.storage.live.com/y4m6laPccbyAyfaY-wKKBCZkrG2PI7EZ4dwNgW8EMmglwa9I2xL8ZMao5htOvQ7rSufpNZbFGBJwO4sEL5tr5hy22dW3VOlkkUsYZUaMkiHATbRWlfVBZNKwJ9Zx76mnQ59g9e2zuCwpayNQPC82Xt9IvF1QGQdXVpLaTScPGMMb8vDG07ioL7OJ719sn_T7G8cZeDcC3Ac5jO4rlEuEC4U5A/2018-09-02%20Jazz%20in%20the%20Cradle%20%40%20NIROX%20JSP-231.jpg?psid=1&width=1809&height=1206"
@@ -236,7 +296,7 @@ class EventsC extends Component {
                 Go somewhere
           </a>
             </div>
-          </div>
+          </div> */}
         </Slider>
       </div>
     )

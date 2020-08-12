@@ -9,7 +9,14 @@ import "../styles/create.css";
 
 const INITIAL_STATE = {
   title: '',
+  brief: '',
   description: '',
+  imgsrc: '',
+  date: '',
+  time: '',
+  price: '',
+  organizer: '',
+
 };
 
 class CreateEvent extends Component {
@@ -61,8 +68,6 @@ class CreateEvent extends Component {
   }
 
 
-
-
   render() {
     const { events } = this.state;
     return (
@@ -87,7 +92,23 @@ class CreateEvent extends Component {
         <div class="input-group input-group-sm mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-sm">
-              Event Description
+              Brief description
+              </span>
+          </div>
+          <input
+            type="text"
+            name="brief"
+            onChange={this.onChange}
+            value={events.brief}
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+              Detailed Description
               </span>
           </div>
           <input
@@ -100,31 +121,88 @@ class CreateEvent extends Component {
             aria-describedby="inputGroup-sizing-sm"
           />
         </div>
-        <div class="input-group mb-3">
-          {/* <p>{this.state.events.title}</p>
-          <br/>
-          <p>{this.state.events.description}</p> */}
-          <div class="custom-file">
-            <input
-              type="file"
-              class="custom-file-input"
-              id="inputGroupFile02"
-            />
-     
-            <label
-              class="custom-file-label"
-              for="inputGroupFile02"
-              aria-describedby="inputGroupFileAddon02"
-            >
-              Choose file
-              </label> 
-          </div>
-          <div class="input-group-append">
-            <span class="input-group-text" id="inputGroupFileAddon02">
-              Upload
+        <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+              Image link
               </span>
           </div>
+          <input
+            type="text"
+            name="imgsrc"
+            onChange={this.onChange}
+            value={events.imgsrc}
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+          </div>
+          
+          <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+              Date
+              </span>
+          </div>
+          <input
+            type="text"
+            name="date"
+            onChange={this.onChange}
+            value={events.date}
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
         </div>
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+              Time
+              </span>
+          </div>
+          <input
+            type="text"
+            name="time"
+            onChange={this.onChange}
+            value={events.time}
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+              Price
+              </span>
+          </div>
+          <input
+            type="text"
+            name="price"
+            onChange={this.onChange}
+            value={events.price}
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-sm">
+              Organized by (include partnerts too)
+              </span>
+          </div>
+          <input
+            type="text"
+            name="organizer"
+            onChange={this.onChange}
+            value={events.organizer}
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </div>
+   
         <button type="button" class="btn btn-secondary" onClick={this.onClick}>
           Add
           </button>

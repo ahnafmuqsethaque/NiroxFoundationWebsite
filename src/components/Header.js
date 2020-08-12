@@ -1,28 +1,35 @@
 import React, { Component } from 'react';
 import { withFirebase } from "./Firebase";
 
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const eventID = urlParams.get('eventId');
+
+
 class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
             loading: false,
-            events: {}
+            event: {},
+            eventID: eventID,
         }
     }
 
     componentDidMount() {
         this.setState({ loading: true });
         this.props.firebase.events().on('value', snapshot => {
-            const idArr = Object.keys(snapshot.val());
-            const randID = idArr[0];
-            console.log(snapshot.val()[randID]);
-            this.setState({
-                loading: false,
-                events: snapshot.val()[randID],
+
+         
+            this.setState((prevState) => {
+                return {
+                    ...prevState,
+                    loading: false,
+                    event: snapshot.val()[eventID],
+                }
+
             })
-            // idArr.forEach((id) => {
-            // events.id
-            // })
+
 
         })
 
@@ -34,28 +41,42 @@ class Header extends Component {
     }
 
     render() {
+        const {
+            title,
+            brief,
+            description,
+            imgsrc,
+            date,
+            time,
+            price,
+            organizer,
+        } = this.state.event;
         return (
             <div class="row">
                 <div class="column">
                     <img
-                        src="https://db3pap001files.storage.live.com/y4mFAtmbJpxX5xonw-VD45drR836ZL-qSafrIgBhbHCDDkmr1BQKHq6VC7vHSBweYFD8fK8aCTYUj0lb91wavBM0b8KV91-7eul6M6JBdjdCzZ83-9VRTT1iZOaMXhKjqbqPyZmUkMrc7HLHYNUmIW5CasvQqVZ8BX6nnq7Q-LTJHakxC3C-Psr1MxLdGWe4pWXvVMpXuNqKimv4WAE51VbDg/DSC_0110_2.jpg?psid=1&width=414&height=618"
+                        src={imgsrc}
                         class="responsive"
+                        alt="..."               
                     />
                 </div>
                 <div class="column" id="info">
-                    <h1 >Event Title</h1>
-                    <p>Date: XXX </p>
-                    <p>Time: 9 AUG 2020 SAST (+02:00) </p>
-                    <p>Price: XXX </p>
+                    <h1 >{title}</h1>
+                    <p>Date: {date} </p>
+                    <p>Time: {time} </p>
+                    <p>Price: {price} </p>
                     <p>
-                        Wandile Mabaso, a Soweto-born food artist with Michelin star
+                        {brief}
+                        {/* Wandile Mabaso, a Soweto-born food artist with Michelin star
                         training, has created a unique dining experience that you can enjoy
                         at CAPSULE — an experiment with ingredients and flavours, drawing
-                        inspiration from nature
+                        inspiration from nature */}
                     </p>
-                    <p>It will still be a day of music, food and art in nature, for the whole family.
+                    <p>
+                        {description}
+                        {/* It will still be a day of music, food and art in nature, for the whole family.
                               Epic festival cuisine by the Epicurean Emporium - a selection of traders from the food &amp;
-                                      design markets in and around Johannesburg.
+                                      design markets in and around Johannesburg. */}
                     </p>
                     {/* <p>Tickets available from:</p>
                     <p>www.unathi.co</p>
@@ -66,6 +87,7 @@ class Header extends Component {
                                       No refunds.</p>
                     <p>Children must be under adult supervision at all times. Entry to the park is at your own risk.</p>
                     <p>NIROX is not responsible for any loss, injury or damage.</p>
+                    <p><strong>Organized by:</strong>{organizer}</p>
                     <a href="/reservations" class="btnh">
                         Book Now
                   </a>
