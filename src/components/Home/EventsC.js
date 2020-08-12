@@ -94,10 +94,10 @@ class EventsC extends Component {
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
-              </p>
+          </p>
                 <a href="/events" class="btnh">
                   Go somewhere
-              </a>
+          </a>
               </div>
             </div>
           </div>
@@ -112,10 +112,10 @@ class EventsC extends Component {
               <p class="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
-              </p>
+          </p>
               <a href="/events" class="btnh">
                 Go somewhere
-              </a>
+          </a>
             </div>
           </div>
           <div class="card">
@@ -129,10 +129,10 @@ class EventsC extends Component {
               <p class="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
-              </p>
+          </p>
               <a href="/events" class="btnh">
                 Go somewhere
-              </a>
+          </a>
             </div>
           </div>
           <div class="card">
@@ -146,10 +146,10 @@ class EventsC extends Component {
               <p class="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
-              </p>
+          </p>
               <a href="/events" class="btnh">
                 Go somewhere
-              </a>
+          </a>
             </div>
           </div>
           <div class="card">
@@ -163,10 +163,10 @@ class EventsC extends Component {
               <p class="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
-              </p>
+          </p>
               <a href="/events" class="btnh">
                 Go somewhere
-              </a>
+          </a>
             </div>
           </div>
           <div class="card">
@@ -180,10 +180,10 @@ class EventsC extends Component {
               <p class="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
-              </p>
+          </p>
               <a href="/events" class="btnh">
                 Go somewhere
-              </a>
+          </a>
             </div>
           </div>
           <div class="card">
@@ -197,10 +197,10 @@ class EventsC extends Component {
               <p class="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
-              </p>
+          </p>
               <a href="/events" class="btnh">
                 Go somewhere
-              </a>
+          </a>
             </div>
           </div>
           <div class="card">
@@ -214,10 +214,10 @@ class EventsC extends Component {
               <p class="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
-              </p>
+          </p>
               <a href="/events" class="btnh">
                 Go somewhere
-              </a>
+          </a>
             </div>
           </div>
           <div class="card">
@@ -231,16 +231,17 @@ class EventsC extends Component {
               <p class="card-text">
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
-              </p>
+          </p>
               <a href="/events" class="btn btn-primary">
                 Go somewhere
-              </a>
+          </a>
             </div>
           </div>
         </Slider>
       </div>
     )
   }
+
 }
 
 export default withFirebase(EventsC);
