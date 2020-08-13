@@ -1,16 +1,87 @@
-import React from 'react';
-import { withAuthorization } from './Session';
+// import React, { Component } from 'react';
+// import { withAuthorization } from './Session';
 
-function Projects() {
+// class Events extends Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             loading: false,
+//             events: {}
 
-    return(
-        <div>
-            <h1>Projects</h1>
-        </div>
-    )
+//         }
+//     }
+//     componentDidMount() {
+//         let idArr = [];
+//         this.setState({ loading: true });
+//         this.props.firebase.projects().on('value', snapshot => {
+//           idArr = Object.keys(snapshot.val());
+//           this.setState((prevState) => {
+//             return {
+//               ...prevState,
+//               events: snapshot.val(),
+//             }
+//           });
+//           const tableBody = document.getElementById("tableBody");
+//           idArr.forEach((id) => {
+    
+//             const {
+//               title,
+//               brief,
+//               description,
+//               imgsrc,
+//               date,
+//               time,
+//               price,
+//               organizer,
+//             } = this.state.events[id];
+    
+//             let tableRow = document.createElement("tr");
 
-}
+//             tableRow.innerHTML = `
+//             <th scope="row">${title}</th>
+//             <td>${date}</td>
+//             <td>${description}</td>
+//             <td eventID=${id}>
+//                 <span eventID=${id} class="badge badge-danger">Delete</span>
+//             </td>
+//             `
+//             tableBody.appendChild(tableRow);
+//           })
+//         });
+    
+    
+//     }
 
-const condition = authUser => !!authUser;
- 
-export default withAuthorization(condition)(Projects);
+//     componentWillUnmount() {
+//         this.props.firebase.projects().off();
+//     }
+
+//     render() {
+
+//         return (
+//             <div>
+
+//                 <h1>Events</h1>
+
+//                 <table class="table table-hover">
+//                     <thead>
+//                         <tr>
+//                             <th scope="col">Title</th>
+//                             <th scope="col">Date</th>
+//                             <th scope="col">Description</th>
+//                             <th scope="col">Delete</th>
+//                         </tr>
+//                     </thead>
+//                     <tbody id="tableBody">
+//                     </tbody>
+//                 </table>
+//             </div>
+//         );
+//     }
+
+// }
+
+
+// const condition = authUser => !!authUser;
+
+// export default withAuthorization(condition)(Events);

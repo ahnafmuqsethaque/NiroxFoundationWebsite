@@ -10,7 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Slider from "react-slick";
 import "../../styles/home.css";
-//FOOTER NOT WORKING ON THIS PAGE FOR SOME REASON\
+
 
 class Home extends Component {
   render() {

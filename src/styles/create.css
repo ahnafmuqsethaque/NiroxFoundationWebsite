@@ -18,3 +18,8 @@ input {
   font-style: normal;
   font-weight: 300;
 }
+
+.input-group {
+  padding-left: 5%;
+  padding-right: 5%;
+}

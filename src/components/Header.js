@@ -21,20 +21,15 @@ class Header extends Component {
         this.setState({ loading: true });
         this.props.firebase.events().on('value', snapshot => {
 
-         
+
             this.setState((prevState) => {
                 return {
                     ...prevState,
                     loading: false,
                     event: snapshot.val()[eventID],
                 }
-
             })
-
-
         })
-
-
     }
 
     componentWillUnmount() {
@@ -58,7 +53,7 @@ class Header extends Component {
                     <img
                         src={imgsrc}
                         class="responsive"
-                        alt="..."               
+                        alt="..."
                     />
                 </div>
                 <div class="column" id="info">

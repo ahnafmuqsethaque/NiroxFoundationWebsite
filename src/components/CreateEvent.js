@@ -16,6 +16,7 @@ const INITIAL_STATE = {
   time: '',
   price: '',
   organizer: '',
+  id: ','
 
 };
 
