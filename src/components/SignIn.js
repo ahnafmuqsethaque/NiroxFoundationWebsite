@@ -7,10 +7,11 @@ import { PasswordForgetLink } from './PasswordForget';
 import { withFirebase } from './Firebase';
 
 import '../styles/signin.css';
+import '../styles/benefits.css';
  
 const SignInPage = () => (
   <div class="center">
-    <h1>Sign In</h1>
+    <h1 class="headline">Sign In</h1>
     <SignInForm />
     <PasswordForgetLink />
     {/* <SignUpLink /> */}

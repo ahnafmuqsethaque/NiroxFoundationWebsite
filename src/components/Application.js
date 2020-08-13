@@ -33,7 +33,7 @@ class Application extends Component {
               rows="3"
             ></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" class="btnap">
             Apply!
           </button>
         </form>

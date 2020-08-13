@@ -1,5 +1,24 @@
+.headline {
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+}
+
+.card-title {
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+}
+
 input {
   margin-top: 2%;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  border-width: 0.00001ch;
+  border-radius: 1px;
 }
 
 .card {
@@ -12,10 +31,30 @@ input {
   font-weight: 300;
 }
 
-.btn {
-  margin-top: 5%;
-  margin-bottom: 3%;
-  font-family: futura-pt, sans-serif;
-  font-style: normal;
-  font-weight: 300;
+.btnsu {
+  margin-top: 7%;
+  margin-bottom: 0.5%;
+  border-radius: 4px;
+  background-color: rgb(167, 197, 197); /* Green */
+  border: none;
+  color: rgb(59, 61, 61);
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.btnsu {
+  transition-duration: 0.4s;
+}
+
+.btnsu:hover {
+  background-color: rgb(91, 113, 128); /* Green */
+  color: rgb(59, 61, 61);
+}
+
+.btnsu:disabled {
+  background-color: rgb(167, 197, 197, 0.5); /* Green */
+  color: rgb(138, 143, 143);
 }
