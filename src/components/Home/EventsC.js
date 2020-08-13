@@ -49,9 +49,8 @@ class EventsC extends Component {
         } = this.state.events[id];
 
         let divEl = document.createElement("div");
-        //divEl.setAttribute("class", "card");
+        divEl.setAttribute("class", "card");
         divEl.innerHTML = `
-          <div class="card">
               <img
               src=${imgsrc}
               class="card-img-top"
@@ -66,7 +65,6 @@ class EventsC extends Component {
                 Go somewhere
                 </a>
               </div >
-          </div>
         `
         eventsDiv.appendChild(divEl);
       })
@@ -136,12 +134,14 @@ class EventsC extends Component {
 
 
     return (
-    <div>
-<h2 class="headerstyle">Events</h2>
-        <Slider {...settings}>
+      <div>
+        <h2 class="headerstyle">Events</h2>
+        <Slider {...settings} id="sliderID">
           <div id="eventsDiv">
+            
 
           </div>
+          
           {/* <div class="practice"> 
           <div class="card">
             <img

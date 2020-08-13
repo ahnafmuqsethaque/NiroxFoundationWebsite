@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withAuthorization } from "./Session";
 
 import '../styles/reservations.css';
+import MyForm from "./Myform";
 
 /*
 ADD VALIDATIONS!!!!
@@ -48,6 +49,7 @@ class Reservations extends Component {
           </button>
         </form>
       </div>
+
     );
   }
 }

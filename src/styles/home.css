@@ -55,6 +55,11 @@ h2 {
   font-family: futura-pt, sans-serif;
   font-style: normal;
   font-weight: 300;
+  display: inline-block;
+}
+
+.row {
+  display: flex;
 }
 
 .card-title {
@@ -90,6 +95,8 @@ h2 {
   background-color: rgb(91, 113, 128); /* Green */
   color: rgb(59, 61, 61);
 }
+
+
 
 /* .card {
   height:100%;
