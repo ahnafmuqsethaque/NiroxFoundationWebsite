@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { withFirebase } from "./Firebase";
 
+import "../styles/header.css";
+
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const eventID = urlParams.get('eventId');
