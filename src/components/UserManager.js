@@ -42,7 +42,7 @@ class AdminPage extends Component {
 
     return (
       <div>
-        <h1>User List</h1>
+        <h1 class="headline">User List</h1>
       
         {loading && <div>Loading ...</div>}
 
