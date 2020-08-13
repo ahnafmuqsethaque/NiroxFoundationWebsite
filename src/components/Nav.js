@@ -11,7 +11,6 @@ import * as ROLES from "./../constants/roles";
 const Nav = ({ authUser }) => (
   <div class="nav">
     <AuthUserContext.Consumer>
-      {/* Possible syntax error on line 13 */}
       {(authUser) =>
         authUser ? (
           <NavigationAuth authUser={authUser} />
