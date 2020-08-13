@@ -85,6 +85,7 @@ class SignUpFormBase extends Component {
       username === "";
 
     return (
+      <div class="all">
       <div class="card">
         <div class="card-body">
           <h1 class="card-title">Sign Up</h1>
@@ -103,6 +104,7 @@ class SignUpFormBase extends Component {
               type="text"
               placeholder="Email Address"
             />
+            <br />
             <input
               name="passwordOne"
               value={passwordOne}
@@ -116,11 +118,13 @@ class SignUpFormBase extends Component {
               onChange={this.onChange}
               type="password"
               placeholder="Confirm Password"
+              id="passwordTwo"
             />
             <br />
             <label>
               Admin:
               <input
+                id="admincheck"
                 name="isAdmin"
                 type="checkbox"
                 checked={isAdmin}
@@ -135,6 +139,7 @@ class SignUpFormBase extends Component {
             {error && <p>{error.message}</p>}
           </form>
         </div>
+      </div>
       </div>
     );
   }

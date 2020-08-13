@@ -54,13 +54,14 @@ class PasswordForgetFormBase extends Component {
       <form onSubmit={this.onSubmit}>
         <h3  class="smallheadline">Recover Password</h3>
         <input
-          class="smallheadline"
+          class="infoline"
           name="email"
           value={this.state.email}
           onChange={this.onChange}
           type="text"
           placeholder="Email Address"
         />
+        <br />
         <button class="btnpw" disabled={isInvalid} type="submit">
           Recover Password
         </button>
