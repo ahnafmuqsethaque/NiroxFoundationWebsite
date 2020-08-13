@@ -8,7 +8,6 @@ import { withFirebase } from './Firebase';
  
 const PasswordForgetPage = () => (
   <div>
-    <h1>Reset Password</h1>
     <br />
     <PasswordForgetForm />
   </div>
@@ -52,7 +51,7 @@ class PasswordForgetFormBase extends Component {
  
     return (
       <form onSubmit={this.onSubmit}>
-        <h3  class="smallheadline">Recover Password</h3>
+        <h3  class="headline">Recover Password</h3>
         <input
           class="infoline"
           name="email"
