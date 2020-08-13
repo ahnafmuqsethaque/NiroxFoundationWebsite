@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withAuthorization } from './Session';
+import * as ROLES from "../constants/roles";
 import { withFirebase } from './Firebase';
 import { compose } from 'recompose';
 
@@ -33,7 +34,7 @@ class CreateProject extends Component {
   render() {
     return (
       <div>
-        <h1>Create Project</h1>
+        <h1 class="headline">Create Project</h1>
         <div class="input-group input-group-sm mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-sm">
@@ -87,6 +88,7 @@ class CreateProject extends Component {
   }
 }
 
-const condition = authUser => !!authUser;
+const condition = authUser =>
+  authUser && !!authUser.roles[ROLES.ADMIN];
  
 export default withAuthorization(condition)(CreateProject);

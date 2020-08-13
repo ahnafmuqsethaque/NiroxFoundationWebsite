@@ -1,0 +1,15 @@
+.table {
+  margin: 5%;
+  margin-top: 3%;
+  width: 90vw;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.headline {
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px !important;
+  }

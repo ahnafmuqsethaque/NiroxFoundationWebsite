@@ -94,7 +94,7 @@ const NavigationAuth = ({ authUser }) => (
             <Link to="/admin">
               <li class="nav-item">
                 <a class="nav-link" href="#" >
-                  Admin
+                  Users
                 </a>
               </li>
             </Link>
@@ -122,6 +122,15 @@ const NavigationAuth = ({ authUser }) => (
               <li class="nav-item">
                 <a class="nav-link" href="#" >
                   Create Project
+                </a>
+              </li>
+            </Link>
+          )}
+          {!!authUser.roles[ROLES.ADMIN] && (
+            <Link to="/events">
+              <li class="nav-item">
+                <a class="nav-link" href="#" >
+                  Manage Events
                 </a>
               </li>
             </Link>

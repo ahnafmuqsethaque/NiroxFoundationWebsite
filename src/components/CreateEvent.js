@@ -3,6 +3,7 @@ import { withAuthorization } from './Session';
 //import firebase from 'firebase';
 import { withFirebase } from './Firebase';
 import { compose } from 'recompose';
+import * as ROLES from "../constants/roles";
 
 
 import "../styles/create.css";
@@ -73,7 +74,7 @@ class CreateEvent extends Component {
     const { events } = this.state;
     return (
       <div>
-        <h1>Create Event</h1>
+        <h1 class="headline">Create Event</h1>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-default">
@@ -212,7 +213,8 @@ class CreateEvent extends Component {
   }
 }
 
-const condition = authUser => !!authUser;
+const condition = authUser =>
+  authUser && !!authUser.roles[ROLES.ADMIN];
 
 export default compose(
   withAuthorization(condition),

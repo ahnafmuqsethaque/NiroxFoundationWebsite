@@ -114,7 +114,7 @@ class EventsC extends Component {
                     {event.brief}
                   </p>
                   <a href={"header/events?eventId=" + event.id} class="btnh" eventId={event.id}>
-                    Go somewhere
+                    Learn More
                       </a>
                 </div >
               </div>

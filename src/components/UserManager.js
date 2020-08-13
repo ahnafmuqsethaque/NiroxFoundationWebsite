@@ -3,7 +3,7 @@ import { compose } from "recompose";
 
 import { withFirebase } from "./Firebase";
 import { withAuthorization } from "./Session";
-import * as ROLES from "./../constants/roles";
+import * as ROLES from "../constants/roles";
 
 class AdminPage extends Component {
   constructor(props) {
@@ -42,7 +42,7 @@ class AdminPage extends Component {
 
     return (
       <div>
-        <h1>Admin</h1>
+        <h1>User List</h1>
       
         {loading && <div>Loading ...</div>}
 
