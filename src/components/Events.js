@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withAuthorization } from './Session';
 
 class Events extends Component {
     render() {
@@ -11,6 +12,7 @@ class Events extends Component {
                 </div>
                 <div>
                     <h1>Events 2</h1>
+                    <p>event desc....</p>
                 </div>
                 <div>
                     <h1>Events 3</h1>
@@ -21,4 +23,7 @@ class Events extends Component {
 
 }
 
-export default Events;
+
+const condition = authUser => !!authUser;
+ 
+export default withAuthorization(condition)(Events);

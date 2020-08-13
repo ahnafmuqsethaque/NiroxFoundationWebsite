@@ -1,0 +1,48 @@
+.nav {
+  margin-bottom: 55px;
+}
+.navbar {
+  background-color: #fafafa83;
+}
+
+.navbar-light .nav-item .nav-link {
+  color: rgb(79, 84, 85);
+}
+
+.navbar-light .navbar-brand {
+  color: rgb(79, 84, 85);
+}
+
+.navbar.scrolled {
+  background-color: #FAFAFA !important;
+  color: rgb(79, 84, 85) !important;
+  transition: 500ms ease;
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar {
+    background-color: #FAFAFA;
+    color: black !important;
+    transition: 500ms ease;
+  }
+
+  .nav {
+    margin-bottom: 115px;
+  }
+  .navbar-light .navbar-brand {
+    color: black !important;
+  }
+}
+
+/* Scroll color options */
+.navbar-light.scrolled .navbar-brand {
+  color: black !important;
+}
+
+/* .navbar-light .nav-item .nav-link{
+        color: #ffffff;
+}  */
+
+/* .navbar-light .navbar-brand {
+  color: black;
+} */

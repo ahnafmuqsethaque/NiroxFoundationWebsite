@@ -1,0 +1,59 @@
+.headline {
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.smallheadline {
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  margin-top: 5%;
+  margin-bottom:0%
+}
+
+.infoline {
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  width: 60vw;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(79, 84, 85);
+  margin-top: 2%;
+  
+}
+
+.btnpw {
+  margin-top: 1%;
+  margin-bottom: 0.5%;
+  margin-left: 0.5%;
+  background-color: rgb(184, 214, 214); /* Green */
+  border: none;
+  color: rgb(138, 143, 143);
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.btnpw {
+  transition-duration: 0.4s;
+}
+
+.btnpw:hover {
+  background-color: rgba(162, 190, 190); /* Green */
+  color: rgb(138, 143, 143);
+}
+
+.btnpw:disabled {
+  background-color: rgb(167, 197, 197, 0.5); /* Green */
+  color: rgb(138, 143, 143);
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { withAuthorization } from './Session';
 
 function Projects() {
 
@@ -10,4 +11,6 @@ function Projects() {
 
 }
 
-export default Projects;
+const condition = authUser => !!authUser;
+ 
+export default withAuthorization(condition)(Projects);

@@ -1,4 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { withAuthorization } from "./Session";
+
+import "../styles/reservations.css";
 
 /*
 ADD VALIDATIONS!!!!
@@ -6,68 +9,66 @@ check the bottom of the page: https://getbootstrap.com/docs/4.5/components/forms
 */
 
 class Reservations extends Component {
-    render() {
+  render() {
+    return (
+      <div class="card">
+        <h1 class="headline">Reservation</h1>
+        <form action="https://formspree.io/mzbjwajn" method="POST">
+          <div class="form-group">
+            <label for="exampleInputPassword1"></label>
+            <input
+              name="GuestName"
+              placeholder="Name"
+              type="text"
+              class="form-control"
+              id="nameinput"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1"></label>
+            <input
+              placeholder="Email address"
+              type="email"
+              class="form-control"
+              name="Email"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1"></label>
+            <input
+              name="EventName"
+              placeholder="Event you're signing up for"
+              type="text"
+              class="form-control"
+              id="event"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1"></label>
+            <select
+              name="NumberOfGuests"
+              class="form-control"
+              id="exampleFormControlSelect1"
+            >
+              <option class="placeholder">Number of Guests Attending</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <button type="submit" class="btnr">
+            Reserve
+          </button>
+        </form>
+      </div>
 
-
-        return (
-            <form>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" />
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputPassword4">Password</label>
-                        {/* Do we really want a password here? people are already signed into the membership site. */}
-                        <input type="password" class="form-control" id="inputPassword4" />
-                        <small id="passwordHelpBlock" class="form-text text-muted">
-                            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.</small>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputAddress">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
-                </div>
-
-
-
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputCity">City</label>
-                        <input type="text" class="form-control" id="inputCity" />
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputState">State</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label for="inputZip">Zip</label>
-                        <input type="text" class="form-control" id="inputZip" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck" />
-                        <label class="form-check-label text-body" for="gridCheck">
-                            Agree to terms and conditions
-                        </label>
-                    </div>
-                </div>
-
-
-                <div class="mb-3">
-                    <label for="validationTextarea">Textarea</label>
-                    <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea" required></textarea>
-
-                </div>
-                <button type="submit" class="btn btn-primary">Reserve</button>
-            </form>
-        )
-    }
-
+    );
+  }
 }
 
-export default Reservations;
+const condition = (authUser) => !!authUser;
+
+export default withAuthorization(condition)(Reservations);
