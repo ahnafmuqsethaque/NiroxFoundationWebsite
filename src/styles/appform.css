@@ -1,20 +1,23 @@
-.appform {
-  margin-top: 5%;
-  margin-left: 2%;
-  margin-right: 2%;
+.headline {
   font-family: futura-pt, sans-serif;
   font-style: normal;
   font-weight: 300;
+  font-size: 32px;
 }
 
-.title {
-  margin-top: 0.5%;
-  margin-bottom: 2%;
+.infoline {
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  width: 60vw;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(79, 84, 85);
+  margin-top: 2%;
+  
 }
 
-.headline {
-  margin-bottom: 3%;
-}
 
 .btnap {
   margin-top: 1%;
