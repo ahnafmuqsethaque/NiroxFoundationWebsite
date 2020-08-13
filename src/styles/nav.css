@@ -2,7 +2,7 @@
   margin-bottom: 55px;
 }
 .navbar {
-  background-color: transparent;
+  background-color: #fafafa83;
 }
 
 .navbar-light .nav-item .nav-link {
@@ -10,7 +10,7 @@
 }
 
 .navbar-light .navbar-brand {
-  color: rgb(79, 84, 85) !important;
+  color: rgb(79, 84, 85);
 }
 
 .navbar.scrolled {
@@ -36,13 +36,13 @@
 
 /* Scroll color options */
 .navbar-light.scrolled .navbar-brand {
-  color: black;
+  color: black !important;
 }
 
 /* .navbar-light .nav-item .nav-link{
         color: #ffffff;
 }  */
 
-.navbar-light .navbar-brand {
+/* .navbar-light .navbar-brand {
   color: black;
-}
+} */

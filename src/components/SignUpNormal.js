@@ -117,7 +117,7 @@ class SignUpFormBase extends Component {
               placeholder="Confirm Password"
             />
             <br />
-            <button class="btn btn-primary" type="submit">
+            <button class="btnsu" type="submit">
               Sign Up
             </button>
 

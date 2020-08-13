@@ -1,3 +1,32 @@
+.headline {
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.smallheadline {
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  margin-top: 5%;
+  margin-bottom:0%
+}
+
+.infoline {
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  width: 60vw;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(79, 84, 85);
+  margin-top: 2%;
+  
+}
+
 .btnpw {
   margin-top: 1%;
   margin-bottom: 0.5%;

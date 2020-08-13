@@ -2,6 +2,14 @@
   margin-top: 13.5%;
 }
 
+.form-control {
+  margin-top: 3%;
+  border-radius: 2px;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
 .form-signin {
   width: 100%;
   max-width: 330px;
@@ -33,7 +41,7 @@
   font-weight: 300;
 }
 .form-signin input[type="password"] {
-  margin-bottom: 10px;
+  margin-bottom: 5%;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
