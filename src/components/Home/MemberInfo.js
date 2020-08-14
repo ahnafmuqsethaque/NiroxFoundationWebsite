@@ -12,9 +12,9 @@ class MemberInfo extends Component {
           data-ride="carousel"
         >
           <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active" data-interval="1000">
             <img
-                src="https://db3pap001files.storage.live.com/y4mamXGDp0YXp3x0PKFjdkYY5XYhfDpI72S4w0j5RLBIC9tL2YTT_yyq6vgWp0XDQq4Hn7AVgOFr3c6k3MPgGh0rFA3S9lsE30wYqnJ5ruxYvnz21s9vSBYpxGhQd2QNMn4K3hxc_RVivNvOHT2yMqjmqSm71_fD0BhhXejwA9sGePpOU-MbosmxQpnDJMk3B5scqCDJI5eOsAr2nP6iFAbJA/NIROX-0328.jpg?psid=1&width=1854&height=1236"
+                src="https://mail.google.com/mail/u/1?ui=2&ik=7a8d5df14d&attid=0.7&permmsgid=msg-f:1674937317378649467&th=173e929daf666d7b&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ_3o8RhUd06NfBZGy4vgxEgc_nU1dA2IdAMaJ9wW37ocgO3eGlvPADlnhdMrPdBwsSqymSQlC6cuPNCyW0IHk8Nuvpw6RCPmt0wf-Y3WRX-7T_GyQ4dmtTHnbM&disp=emb&realattid=ii_kdt5ob379"
                 id="first"
                 class="d-block w-100"
                 alt="..."
@@ -22,7 +22,7 @@ class MemberInfo extends Component {
             </div>
             <div class="carousel-item">
             <img
-                src="https://5p2dbq.dm.files.1drv.com/y4m4OFzENump0tDTmR4qWNy-d6zxFJ5iupeoyZYJ4Km4MTVMoIPfA2w2VKzlHQnrm1mSK-VFGH-iSp1W2s8Hv1Vuvlo95flpCT0vE8yR_Ur1nEkcrkNZfegg7yTut9HovcziCJ4lW48w5paLTGZ3SBjfJUfVhkaQsm-g9p4IWWxJcCGWpKPK0feFZdJcai8GGz8jKdfbv8dR8nOTNtjYWTBSNgXVbh_R9HaguK9y0p-p7w/DSC_0292.JPG?psid=1"
+                src="https://mail.google.com/mail/u/1?ui=2&ik=7a8d5df14d&attid=0.11&permmsgid=msg-f:1674937317378649467&th=173e929daf666d7b&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ9gWDQ7IVG7swv4Yxn-nppwx7XLgExHgsLpVAymWEM7NkwYvDb8o1f6xteURcgbFKzKqt6loby-9OPFAGqw4PRGIJI7Vxdh22euvydJ-7iehzcolN7V2Qo3o3U&disp=emb&realattid=ii_kdt5ob3c10"
                 id="first"
                 class="d-block w-100"
                 alt="..."
@@ -30,14 +30,14 @@ class MemberInfo extends Component {
             </div>
             <div class="carousel-item">
             <img
-                src="https://5p2dbq.dm.files.1drv.com/y4m8_uK4h1I-4vxaES37xz6_UGAMgd7xKoy1_Ut_28RAMWWmVAB4B39Plhx65bzkXObM7tq96pAkXPqmcJo9B1chf0LcYAe7KzqU-sn9VQcjqT8TItpHBygqu-2vjBVtpKZFaNpgyYl0Fb90HUImr2Q-GxSFworAhZ3oixDgyECeRLDt7z72Oamz4I_Wi6akSYXeWrTVghKU-Z2MUTBRxYUqwxDJHsvmgv5JWUrbzBRZb4/DSC_0183.JPG?psid=1"
+                src="https://mail.google.com/mail/u/1?ui=2&ik=7a8d5df14d&attid=0.8&permmsgid=msg-f:1674937317378649467&th=173e929daf666d7b&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ8ZcsBZK01s7CNeFYrUlF8YP1yNuoJjzKwszHi2JQ_J7_Tign4p8BVlW7Czq-GTVSycc3IRkgRm51I47IssTSFSxSYm47X22dNaxbqaYqqYC2Zp6wqpG6AJxyg&disp=emb&realattid=ii_kdt5ob328"
                 id="first"
                 class="d-block w-100"
                 alt="..."
               />
             </div>
           </div>
-          {/* <a
+          <a
             class="carousel-control-prev"
             href="#carouselExampleFade"
             role="button"
@@ -54,7 +54,7 @@ class MemberInfo extends Component {
           >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-          </a> */}
+          </a>
         </div>
       </div>
     );

@@ -1,0 +1,65 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.background {
+  background-image: url("https://mail.google.com/mail/u/1?ui=2&ik=7a8d5df14d&attid=0.12&permmsgid=msg-f:1674937317378649467&th=173e929daf666d7b&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ8Ntl4Hww5UmpG7wMvUFj5N31iQ8lhwJ7pyggfmytHFqV8tT-FgywPx_yC6JUzkse7jtCxBU7twDEJwuJ1y0Kfh4vo-tkAn1GeqyBnjiEtIxu-5bahysa7V6CI&disp=emb&realattid=ii_kdt5ob1s0");
+  background-color: #cccccc;
+  height: 100%;
+  margin-top: -20%;
+}
+
+.contactheadline {
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  padding-top: 30%;
+}
+
+.contactform {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid rgb(79, 84, 85);
+  width: 30vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.btncu {
+  margin-top: 1%;
+  margin-bottom: 30%;
+  border-radius: 4px;
+  background-color: rgb(167, 197, 197); /* Green */
+  border: none;
+  color: white;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.btncu {
+  transition-duration: 0.4s;
+}
+
+.btncu:hover {
+  background-color: rgba(162, 190, 190); /* Green */
+  color: rgb(138, 143, 143);
+}
+
+.btncu:disabled {
+  background-color: rgb(167, 197, 197, 0.5); /* Green */
+  color: rgb(138, 143, 143);
+}

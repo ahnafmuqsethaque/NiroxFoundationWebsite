@@ -176,6 +176,13 @@ const NavigationNonAuth = () => (
               </a>
             </li>
           </Link>
+          <Link to="/contactus">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Contact Us
+                </a>
+              </li>
+            </Link>
           <Link to="/application">
             <li class="nav-item">
               <a class="nav-link" href="#">
