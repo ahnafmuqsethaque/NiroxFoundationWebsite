@@ -14,26 +14,26 @@ class MemberInfo extends Component {
           <div class="carousel-inner">
             <div class="carousel-item active" data-interval="1000">
             <img
-                src="https://mail.google.com/mail/u/1?ui=2&ik=7a8d5df14d&attid=0.7&permmsgid=msg-f:1674937317378649467&th=173e929daf666d7b&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ_3o8RhUd06NfBZGy4vgxEgc_nU1dA2IdAMaJ9wW37ocgO3eGlvPADlnhdMrPdBwsSqymSQlC6cuPNCyW0IHk8Nuvpw6RCPmt0wf-Y3WRX-7T_GyQ4dmtTHnbM&disp=emb&realattid=ii_kdt5ob379"
+                src="https://g4cjjw.db.files.1drv.com/y4mjGKrcPUy7jxYC0gIB7ah48-wp38FXW4oEUGTQbSst1-dm3XCqssj9oTlzmYmvAW_c3ztssN03rjfFU_dqdkEceOwBXCk__uypIdjXHSvV4FyDCOVLIvWTogB77zUR92WjS_zYQBzsMeFKJOiEj8X8CWzLnFKEKfvkV0liYl4SATSgUd4sYXYeONw6_x-_DZJ3gD9scl4USvm9DCrIK6OMg"
                 id="first"
                 class="d-block w-100"
-                alt="..."
+                alt="background image"
               />
             </div>
             <div class="carousel-item">
             <img
-                src="https://mail.google.com/mail/u/1?ui=2&ik=7a8d5df14d&attid=0.11&permmsgid=msg-f:1674937317378649467&th=173e929daf666d7b&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ9gWDQ7IVG7swv4Yxn-nppwx7XLgExHgsLpVAymWEM7NkwYvDb8o1f6xteURcgbFKzKqt6loby-9OPFAGqw4PRGIJI7Vxdh22euvydJ-7iehzcolN7V2Qo3o3U&disp=emb&realattid=ii_kdt5ob3c10"
+                src="https://focrjw.db.files.1drv.com/y4mm3BOtvgqFqZ_U5UDR4oUa9yw1U5Bas9XDi-HLA3ACLIBXvPKcPxKnfyj5AI6FaSCAO-9CiWPrSn8wBU39F_okQqz_gcb0QcmO4yYGRkSGnHAUwWiv49nH3796hxnJJ4NiCXO7h1R7pxKpHBiY7dMBCxHS9MQpAwWd7-51-lbTv4ytM_q7CwRCigycp_jcTZTxsvNIiayQ06-A_h7U1Dxqg"
                 id="first"
                 class="d-block w-100"
-                alt="..."
+                alt="background image"
               />
             </div>
             <div class="carousel-item">
             <img
-                src="https://mail.google.com/mail/u/1?ui=2&ik=7a8d5df14d&attid=0.8&permmsgid=msg-f:1674937317378649467&th=173e929daf666d7b&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ8ZcsBZK01s7CNeFYrUlF8YP1yNuoJjzKwszHi2JQ_J7_Tign4p8BVlW7Czq-GTVSycc3IRkgRm51I47IssTSFSxSYm47X22dNaxbqaYqqYC2Zp6wqpG6AJxyg&disp=emb&realattid=ii_kdt5ob328"
+                src="https://g4ckjw.db.files.1drv.com/y4mxtDq4OE4JpTwawi8vw8CMCUvBTTP9Y55m9j-vQL75bRobCfJrgqk_AtjpbKFP2zM5haglgvGDx6Q4Bu4u4AkaKoQ-TElKfCJugdH4jxmpXgVmDbVUh7E1XKv3h3C3upG0Yt_ptWCu54BwR4EYt8E0U9hDmyV9v298Wz_OJbebRNDY84aYc7DG1UYEWielE1jlNHBKhz9w_IhLRVeyHMZnA"
                 id="first"
                 class="d-block w-100"
-                alt="..."
+                alt="background image"
               />
             </div>
           </div>

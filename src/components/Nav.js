@@ -135,6 +135,15 @@ const NavigationAuth = ({ authUser }) => (
               </li>
             </Link>
           )}
+          {!!authUser.roles[ROLES.ADMIN] && (
+            <Link to="/projects">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Manage Projects
+                </a>
+              </li>
+            </Link>
+          )}
           <li>
             <SignOutButton />
           </li>
