@@ -18,8 +18,9 @@ import SignUpPage from "./SignUpNormal";
 import PasswordForget from "./PasswordForget";
 import PasswordChange from "./PasswordChange";
 import Account from "./Account";
-import AdminPage from "./Admin";
+import AdminPage from "./UserManager";
 import LandingPage from "./LandngPage";
+import Project from "./Project";
 import { withAuthentication } from './Session';
  
 const AppRouter = () => (
@@ -27,7 +28,7 @@ const AppRouter = () => (
           <div className="App">
             <Nav />
             <Switch>
-              <Route path="/" exact component={SignIn} exact />
+              <Route path="/" exact component={LandingPage} exact />
               <Route path="/events" component={Events} exact />
               <Route path="/projects" component={Projects} exact />
               <Route path="/reservations" component={Reservations} exact />
@@ -46,6 +47,7 @@ const AppRouter = () => (
               <Route path="/admin" component={AdminPage} exact />
               <Route path="/signupnormal" component={SignUpPage} exact />
               <Route path="/landingpage" component={LandingPage} exact />
+              <Route path="/project" component={Project} exact />
             </Switch>
           </div>
         </Router>

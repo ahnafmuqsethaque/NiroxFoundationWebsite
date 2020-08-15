@@ -13,6 +13,18 @@
   font-weight: 300;
 }
 
+.something {
+  float: right;
+  width: 50%;
+  margin: auto;
+  margin-top: 5% ;
+  padding: 5px;
+  font-size: 9px;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
 /* Clear floats after image containers */
 .row::after {
   content: "";

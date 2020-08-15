@@ -2,10 +2,19 @@
   color: rgba(104, 112, 114, 0.9)!important;
 }
 
-.headline {
+.resvbackground {
+  background-image: url("https://g4cyjw.db.files.1drv.com/y4mzEqjwFJPP4tfHr7S77fiYST0DCFXH0PrjzuG0lJ-egHkAILB6syxf7plNENVeJNmHZB1OmGSg0Bta0bTeouxWRF0G-5JC-npCqHO41KQIH4b3mBVlYOruz61ZT7f3L35v2QoMg_OlbS0q-zml7Ku3u8esyg2iqdqqtrqKL41L809Za_kqqN9BgAoT9e--hWXhsVjdjKLEETt7keF7-eD0A?width=3888&height=2792&cropmode=none");
+  background-color: #cccccc;
+  height: 100%;
+  margin-top: -20%;
+}
+
+.resvheadline {
   font-family: futura-pt, sans-serif;
   font-style: normal;
+  font-size: 32;
   font-weight: 300;
+  padding-top: 35%;
   
 }
 
@@ -13,11 +22,15 @@
   border: none;
   background-color: transparent;
   border-bottom: 1px solid rgb(79, 84, 85);
+  width: 30vw;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
 .btnr {
   margin-top: 1%;
-  margin-bottom: 0.5%;
+  margin-bottom: 50%;
   border-radius: 4px;
   background-color: rgb(167, 197, 197); /* Green */
   border: none;

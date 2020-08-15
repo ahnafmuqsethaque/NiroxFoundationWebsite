@@ -12,32 +12,32 @@ class MemberInfo extends Component {
           data-ride="carousel"
         >
           <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active" data-interval="1000">
             <img
-                src="https://db3pap001files.storage.live.com/y4mamXGDp0YXp3x0PKFjdkYY5XYhfDpI72S4w0j5RLBIC9tL2YTT_yyq6vgWp0XDQq4Hn7AVgOFr3c6k3MPgGh0rFA3S9lsE30wYqnJ5ruxYvnz21s9vSBYpxGhQd2QNMn4K3hxc_RVivNvOHT2yMqjmqSm71_fD0BhhXejwA9sGePpOU-MbosmxQpnDJMk3B5scqCDJI5eOsAr2nP6iFAbJA/NIROX-0328.jpg?psid=1&width=1854&height=1236"
+                src="https://g4cjjw.db.files.1drv.com/y4mjGKrcPUy7jxYC0gIB7ah48-wp38FXW4oEUGTQbSst1-dm3XCqssj9oTlzmYmvAW_c3ztssN03rjfFU_dqdkEceOwBXCk__uypIdjXHSvV4FyDCOVLIvWTogB77zUR92WjS_zYQBzsMeFKJOiEj8X8CWzLnFKEKfvkV0liYl4SATSgUd4sYXYeONw6_x-_DZJ3gD9scl4USvm9DCrIK6OMg"
                 id="first"
                 class="d-block w-100"
-                alt="..."
+                alt="background image"
               />
             </div>
             <div class="carousel-item">
             <img
-                src="https://5p2dbq.dm.files.1drv.com/y4m4OFzENump0tDTmR4qWNy-d6zxFJ5iupeoyZYJ4Km4MTVMoIPfA2w2VKzlHQnrm1mSK-VFGH-iSp1W2s8Hv1Vuvlo95flpCT0vE8yR_Ur1nEkcrkNZfegg7yTut9HovcziCJ4lW48w5paLTGZ3SBjfJUfVhkaQsm-g9p4IWWxJcCGWpKPK0feFZdJcai8GGz8jKdfbv8dR8nOTNtjYWTBSNgXVbh_R9HaguK9y0p-p7w/DSC_0292.JPG?psid=1"
+                src="https://focrjw.db.files.1drv.com/y4mm3BOtvgqFqZ_U5UDR4oUa9yw1U5Bas9XDi-HLA3ACLIBXvPKcPxKnfyj5AI6FaSCAO-9CiWPrSn8wBU39F_okQqz_gcb0QcmO4yYGRkSGnHAUwWiv49nH3796hxnJJ4NiCXO7h1R7pxKpHBiY7dMBCxHS9MQpAwWd7-51-lbTv4ytM_q7CwRCigycp_jcTZTxsvNIiayQ06-A_h7U1Dxqg"
                 id="first"
                 class="d-block w-100"
-                alt="..."
+                alt="background image"
               />
             </div>
             <div class="carousel-item">
             <img
-                src="https://5p2dbq.dm.files.1drv.com/y4m8_uK4h1I-4vxaES37xz6_UGAMgd7xKoy1_Ut_28RAMWWmVAB4B39Plhx65bzkXObM7tq96pAkXPqmcJo9B1chf0LcYAe7KzqU-sn9VQcjqT8TItpHBygqu-2vjBVtpKZFaNpgyYl0Fb90HUImr2Q-GxSFworAhZ3oixDgyECeRLDt7z72Oamz4I_Wi6akSYXeWrTVghKU-Z2MUTBRxYUqwxDJHsvmgv5JWUrbzBRZb4/DSC_0183.JPG?psid=1"
+                src="https://g4ckjw.db.files.1drv.com/y4mxtDq4OE4JpTwawi8vw8CMCUvBTTP9Y55m9j-vQL75bRobCfJrgqk_AtjpbKFP2zM5haglgvGDx6Q4Bu4u4AkaKoQ-TElKfCJugdH4jxmpXgVmDbVUh7E1XKv3h3C3upG0Yt_ptWCu54BwR4EYt8E0U9hDmyV9v298Wz_OJbebRNDY84aYc7DG1UYEWielE1jlNHBKhz9w_IhLRVeyHMZnA"
                 id="first"
                 class="d-block w-100"
-                alt="..."
+                alt="background image"
               />
             </div>
           </div>
-          {/* <a
+          <a
             class="carousel-control-prev"
             href="#carouselExampleFade"
             role="button"
@@ -54,7 +54,7 @@ class MemberInfo extends Component {
           >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
-          </a> */}
+          </a>
         </div>
       </div>
     );

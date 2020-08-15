@@ -24,15 +24,15 @@ const Nav = ({ authUser }) => (
 );
 
 const toggler = (event) => {
-document.getElementById("navid").setAttribute("style", "transparent")
-}
+  document.getElementById("navid").setAttribute("style", "transparent");
+};
 
 const NavigationAuth = ({ authUser }) => (
   <div>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light" id="navid">
       <a class="navbar-brand" href="/home">
         Nirox Foundation
-      {/* <img
+        {/* <img
           alt="Nirox Foundation"
           src="https://drive.google.com/file/d/1cKW1-Naaz-8OJaZ7jU8bVfSApu2eWbvg/view?usp=sharing"
           width="135"
@@ -56,7 +56,7 @@ const NavigationAuth = ({ authUser }) => (
         id="navbarNavDropdown"
       >
         <ul class="navbar-nav ">
-          {!authUser.roles[ROLES.ADMIN] && (
+          {/* {!authUser.roles[ROLES.ADMIN] && (
             <Link to="/benefits">
               <li class="nav-item">
                 <a class="nav-link" href="/benefits">
@@ -64,7 +64,7 @@ const NavigationAuth = ({ authUser }) => (
                 </a>
               </li>
             </Link>
-          )}
+          )} */}
           {!authUser.roles[ROLES.ADMIN] && (
             <Link to="/reservations">
               <li class="nav-item">
@@ -93,8 +93,8 @@ const NavigationAuth = ({ authUser }) => (
           {!!authUser.roles[ROLES.ADMIN] && (
             <Link to="/admin">
               <li class="nav-item">
-                <a class="nav-link" href="#" >
-                  Admin
+                <a class="nav-link" href="#">
+                  Users
                 </a>
               </li>
             </Link>
@@ -102,7 +102,7 @@ const NavigationAuth = ({ authUser }) => (
           {!!authUser.roles[ROLES.ADMIN] && (
             <Link to="/signupadmin">
               <li class="nav-item">
-                <a class="nav-link" href="#" >
+                <a class="nav-link" href="#">
                   Sign Up
                 </a>
               </li>
@@ -111,7 +111,7 @@ const NavigationAuth = ({ authUser }) => (
           {!!authUser.roles[ROLES.ADMIN] && (
             <Link to="/createevent">
               <li class="nav-item">
-                <a class="nav-link" href="#" >
+                <a class="nav-link" href="#">
                   Create Event
                 </a>
               </li>
@@ -120,8 +120,26 @@ const NavigationAuth = ({ authUser }) => (
           {!!authUser.roles[ROLES.ADMIN] && (
             <Link to="/createproject">
               <li class="nav-item">
-                <a class="nav-link" href="#" >
+                <a class="nav-link" href="#">
                   Create Project
+                </a>
+              </li>
+            </Link>
+          )}
+          {!!authUser.roles[ROLES.ADMIN] && (
+            <Link to="/events">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Manage Events
+                </a>
+              </li>
+            </Link>
+          )}
+          {!!authUser.roles[ROLES.ADMIN] && (
+            <Link to="/projects">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Manage Projects
                 </a>
               </li>
             </Link>
@@ -162,18 +180,32 @@ const NavigationNonAuth = () => (
         <ul class="navbar-nav">
           <Link to="/signin">
             <li class="nav-item">
-              <a class="nav-link" href="#" >
+              <a class="nav-link" href="#">
                 Sign In
               </a>
             </li>
           </Link>
+          <Link to="/contactus">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Contact Us
+                </a>
+              </li>
+            </Link>
           <Link to="/application">
             <li class="nav-item">
-              <a class="nav-link" href="#" >
+              <a class="nav-link" href="#">
                 Application
               </a>
             </li>
           </Link>
+          {/* <Link to="/benefits">
+            <li class="nav-item">
+              <a class="nav-link" href="/benefits">
+                Benefits
+              </a>
+            </li>
+          </Link> */}
         </ul>
       </div>
     </nav>
