@@ -3,12 +3,9 @@ import { withAuthorization } from "./Session";
 
 import "../styles/reservations.css";
 
-/*
-ADD VALIDATIONS!!!!
-check the bottom of the page: https://getbootstrap.com/docs/4.5/components/forms/
-*/
 
 class Reservations extends Component {
+
   render() {
     return (
       <div class="card">

@@ -15,7 +15,6 @@ class EventsC extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      //loading: false,
       events: [],
       //idArr : [],
     }
@@ -23,27 +22,24 @@ class EventsC extends Component {
   }
 
   componentDidMount() {
-    
+
     let eventsArr = [];
     // this.setState({ loading: true });
     this.props.firebase.events().on('value', snapshot => {
-      console.log()
-      console.log(snapshot.val());
-      let idArr = Object.keys(snapshot.val());
-      idArr.forEach((id) => {
-        eventsArr.push(snapshot.val()[id]);
-      })
-      this.setState((prevState) => {
 
-        return {
-          ...prevState,
-          events: eventsArr,
-        }
-      });
+      if (snapshot.val()) {
+        let idArr = Object.keys(snapshot.val());
+        idArr.forEach((id) => {
+          eventsArr.push(snapshot.val()[id]);
+        })
+        this.setState((prevState) => {
 
+          return {
+            events: eventsArr,
+          }
+        });
+      } 
     });
-
-
   }
 
   componentWillUnmount() {
@@ -95,12 +91,8 @@ class EventsC extends Component {
     return (
       <div>
         <h2 class="headerstyle">Events</h2>
-        <Slider {...settings} id="sliderID">
-
+        <Slider {...settings} >
           {events.map((event) => {
-            console.log("HELLO");
-            console.log(event.id);
-
             return (
               <div class="card">
                 <img
@@ -113,8 +105,8 @@ class EventsC extends Component {
                   <p class="card-text">
                     {event.brief}
                   </p>
-                  <a href={"header/events?eventId=" + event.id} class="btnh" eventId={event.id}>
-                    Go somewhere
+                  <a href={"header/?eventId=" + event.id} class="btnh" eventId={event.id}>
+                    Learn More
                       </a>
                 </div >
               </div>

@@ -16,7 +16,7 @@ const INITIAL_STATE = {
   time: '',
   price: '',
   organizer: '',
-  id: ','
+  id: '',
 
 };
 
@@ -24,13 +24,8 @@ class CreateEvent extends Component {
 
   constructor(props) {
     super(props);
-    // doing w/ higher order fns ----START
-    //this.app = firebase.initializeApp(CONFIG);
-    //this.database = this.app.database().ref().child('nirox');
-    // doing w/ higher order fns -----END
     this.state = {
-    
-      events: {...INITIAL_STATE},
+      events: { ...INITIAL_STATE },
     }
 
   }
@@ -42,30 +37,47 @@ class CreateEvent extends Component {
     //   description: "hello world, welcome to Nirox"
     // }
 
-    
+
     this.setState({
-      events: {...INITIAL_STATE}
+      events: { ...INITIAL_STATE }
     })
 
 
   }
 
   onClick = (event) => {
-    this.props.firebase.events().push(this.state.events);
+    let databaseRef = this.props.firebase.events().push(this.state.events);
+    let currKey = databaseRef.getKey()
+
+    console.log("HELLO")
+    console.log(databaseRef.getKey())
+    this.setState(prevState => {
+      return {
+        events: {
+          ...prevState.events,
+          id: currKey
+        }
+      }
+    })
+    databaseRef.update({
+      id : currKey
+    })
+
+    window.location.reload(false);
     event.preventDefault();
   }
 
   onChange = (event) => {
-    const {name, value} = event.target;
+    const { name, value } = event.target;
     this.setState(prevState => {
       return {
-          events: {
-             ...prevState.events,
-              [name]: value,
-          }
+        events: {
+          ...prevState.events,
+          [name]: value,
+        }
       }
-  });
-    
+    });
+
   }
 
 
@@ -80,7 +92,7 @@ class CreateEvent extends Component {
               Event Title
               </span>
           </div>
-          <textarea
+          <input
             type="text"
             name="title"
             class="form-control"
@@ -112,7 +124,7 @@ class CreateEvent extends Component {
               Detailed Description
               </span>
           </div>
-          <input
+          <textarea
             type="text"
             name="description"
             onChange={this.onChange}
@@ -123,7 +135,7 @@ class CreateEvent extends Component {
           />
         </div>
         <div class="input-group input-group-sm mb-3">
-        <div class="input-group-prepend">
+          <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-sm">
               Image link
               </span>
@@ -137,9 +149,9 @@ class CreateEvent extends Component {
             aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-sm"
           />
-          </div>
-          
-          <div class="input-group input-group-sm mb-3">
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-sm">
               Date
@@ -203,7 +215,7 @@ class CreateEvent extends Component {
             aria-describedby="inputGroup-sizing-sm"
           />
         </div>
-   
+
         <button type="button" class="btn btn-secondary" onClick={this.onClick}>
           Add
           </button>

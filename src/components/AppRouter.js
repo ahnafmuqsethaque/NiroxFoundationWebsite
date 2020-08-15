@@ -20,6 +20,7 @@ import PasswordChange from "./PasswordChange";
 import Account from "./Account";
 import AdminPage from "./Admin";
 import LandingPage from "./LandngPage";
+import Project from "./Project";
 import { withAuthentication } from './Session';
  
 const AppRouter = () => (
@@ -46,6 +47,7 @@ const AppRouter = () => (
               <Route path="/admin" component={AdminPage} exact />
               <Route path="/signupnormal" component={SignUpPage} exact />
               <Route path="/landingpage" component={LandingPage} exact />
+              <Route path="/project" component={Project} exact />
             </Switch>
           </div>
         </Router>

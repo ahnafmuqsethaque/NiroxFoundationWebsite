@@ -1,39 +1,40 @@
 import React, { Component } from 'react';
 import { withFirebase } from "./Firebase";
 
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const eventID = urlParams.get('eventId');
+const qs = window.location.search;
+const urlParam = new URLSearchParams(qs);
+const projectID = urlParam.get('projectId');
 
 
-class Header extends Component {
+class Project extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
             loading: false,
-            event: {},
-            eventID: eventID,
+            project: {},
+            projectID: projectID,
         }
+        
     }
 
     componentDidMount() {
         this.setState({ loading: true });
-        this.props.firebase.events().on('value', snapshot => {
-
+        this.props.firebase.projects().on('value', snapshot => {
 
             this.setState((prevState) => {
                 return {
                     ...prevState,
                     loading: false,
-                    event: snapshot.val()[eventID],
+                    project: snapshot.val()[projectID],
                 }
             })
+
         })
     }
 
     componentWillUnmount() {
-        this.props.firebase.events().off();
+        this.props.firebase.projects().off();
     }
 
     render() {
@@ -43,10 +44,9 @@ class Header extends Component {
             description,
             imgsrc,
             date,
-            time,
-            price,
+            location,
             organizer,
-        } = this.state.event;
+        } = this.state.project;
         return (
             <div class="row">
                 <div class="column">
@@ -59,8 +59,7 @@ class Header extends Component {
                 <div class="column" id="info">
                     <h1 class="breathe">{title}</h1>
                     <p>Date: {date} </p>
-                    <p>Time: {time} </p>
-                    <p>Price: {price} </p>
+                    <p>Location: {location} </p>
                     <p>
                         {brief}
                         {/* Wandile Mabaso, a Soweto-born food artist with Michelin star
@@ -74,16 +73,16 @@ class Header extends Component {
                               Epic festival cuisine by the Epicurean Emporium - a selection of traders from the food &amp;
                                       design markets in and around Johannesburg. */}
                     </p>
-    
+
                     <br />
-                    <p>NIROX is an outdoor venue and therefore subject to the weather. While every care is taken to
+                    {/* <p>NIROX is an outdoor venue and therefore subject to the weather. While every care is taken to
                                 ensure the performance, in the event of inclement weather any change in plans will be communicated.
                                       No refunds.</p>
                     <p>Children must be under adult supervision at all times. Entry to the park is at your own risk.</p>
-                    <p>NIROX is not responsible for any loss, injury or damage.</p>
+                    <p>NIROX is not responsible for any loss, injury or damage.</p> */}
                     <p><strong>Organized by:</strong>{organizer}</p>
                     <a href="/reservations" class="btnh">
-                        Book Now
+                        Get Involved
                   </a>
                 </div>
             </div>
@@ -93,4 +92,4 @@ class Header extends Component {
 
 }
 
-export default withFirebase(Header);
+export default withFirebase(Project);

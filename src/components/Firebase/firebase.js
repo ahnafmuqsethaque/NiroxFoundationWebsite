@@ -55,7 +55,7 @@ class Firebase {
 
             // default empty roles
             if (!dbUser.roles) {
-               dbUser.roles = {};
+              dbUser.roles = {};
               // dbUser.roles = [];
             }
 
@@ -76,11 +76,14 @@ class Firebase {
   // *** User API ***
 
   user = (uid) => this.db.ref(`users/${uid}`);
-
   users = () => this.db.ref("users");
   nirox = () => this.db.ref("nirox");
   memberships = () => this.db.ref("memberships");
   events = () => this.db.ref("events");
+  event = (eventID) => this.db.ref(`events/${eventID}`);
+  projects = () => this.db.ref("projects");
+  project = (projectID) => this.db.ref(`projects/${projectID}`);
+
 }
 
 export default Firebase;
