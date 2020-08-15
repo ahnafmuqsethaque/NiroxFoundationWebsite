@@ -2,10 +2,19 @@
   color: rgba(104, 112, 114, 0.9)!important;
 }
 
-.headline {
+.resvbackground {
+  background-image: url("https://mail.google.com/mail/u/1?ui=2&ik=7a8d5df14d&attid=0.5&permmsgid=msg-f:1674937317378649467&th=173e929daf666d7b&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ_YzwxHY8eqyHMvsp-Smang7pJZeAxd9Gljg65COaqf5HXerJ5NC-ASSh6X8eFReihr6SaGHj-2iVyHLHFfHJ3Y1GvSUiJdLRuI0K9EpbfrsIa5c_5g7PQAlwE&disp=emb&realattid=ii_kdt5ob292");
+  background-color: #cccccc;
+  height: 100%;
+  margin-top: -20%;
+}
+
+.resvheadline {
   font-family: futura-pt, sans-serif;
   font-style: normal;
+  font-size: 32;
   font-weight: 300;
+  padding-top: 30%;
   
 }
 
@@ -13,11 +22,15 @@
   border: none;
   background-color: transparent;
   border-bottom: 1px solid rgb(79, 84, 85);
+  width: 30vw;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
 .btnr {
   margin-top: 1%;
-  margin-bottom: 0.5%;
+  margin-bottom: 5%;
   border-radius: 4px;
   background-color: rgb(167, 197, 197); /* Green */
   border: none;

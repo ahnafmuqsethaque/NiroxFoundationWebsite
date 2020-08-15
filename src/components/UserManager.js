@@ -19,6 +19,13 @@ class AdminPage extends Component {
 
 
   render() {
+    // const { users, loading } = this.state;
+
+    // return (
+    //   <div>
+    //     <h1 class="headline">User List</h1>
+      
+    //     {loading && <div>Loading ...</div>}
 
 return(
   <Userlist />
@@ -26,7 +33,7 @@ return(
   }
 }
 
-// const UserList = ({ users }) => (
+{/* // const UserList = ({ users }) => (
 //   <ul>
 //     {users.map((user) => (
 //       <li key={user.uid}>   
@@ -40,7 +47,7 @@ return(
 //       </li>
 //     ))}
 //   </ul>
-// );
+// ); */}
 
 const condition = authUser =>
   authUser && !!authUser.roles[ROLES.ADMIN];

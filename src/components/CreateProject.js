@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withAuthorization } from './Session';
+import * as ROLES from "../constants/roles";
 import { withFirebase } from './Firebase';
 import { compose } from 'recompose';
 
@@ -74,8 +75,8 @@ class CreateProject extends Component {
     const { projects } = this.state;
     return (
       <div>
-        <h1>Create Project</h1>
-        <div class="input-group mb-3">
+        <h1 class="headline">Create Project</h1>
+        <div class="input-group input-group-sm mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroup-sizing-default">
               Project Title
@@ -182,7 +183,9 @@ class CreateProject extends Component {
   }
 }
 
-const condition = authUser => !!authUser;
+
+const condition = authUser =>
+  authUser && !!authUser.roles[ROLES.ADMIN];
 
 export default compose(
   withAuthorization(condition),
@@ -190,3 +193,4 @@ export default compose(
 )(CreateProject);
 
 //export default withAuthorization(condition)(withFirebase((CreateEvent)));
+

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { withAuthorization } from './Session';
+import * as ROLES from "../constants/roles";
+
+import "../styles/events.css";
 
 
 class Events extends Component {
@@ -82,7 +85,7 @@ class Events extends Component {
         return (
             <div>
 
-                <h1>Events</h1>
+                <h1 class="headline">Events</h1>
 
                 <table class="table table-hover">
                     <thead>
@@ -141,6 +144,7 @@ class Events extends Component {
 }
 
 
-const condition = authUser => !!authUser;
+const condition = authUser =>
+  authUser && !!authUser.roles[ROLES.ADMIN];
 
 export default withAuthorization(condition)(Events);

@@ -18,7 +18,7 @@ import SignUpPage from "./SignUpNormal";
 import PasswordForget from "./PasswordForget";
 import PasswordChange from "./PasswordChange";
 import Account from "./Account";
-import AdminPage from "./Admin";
+import AdminPage from "./UserManager";
 import LandingPage from "./LandngPage";
 import Project from "./Project";
 import { withAuthentication } from './Session';
