@@ -27,7 +27,7 @@ const AppRouter = () => (
           <div className="App">
             <Nav />
             <Switch>
-              <Route path="/" exact component={SignIn} exact />
+              <Route path="/" exact component={LandingPage} exact />
               <Route path="/events" component={Events} exact />
               <Route path="/projects" component={Projects} exact />
               <Route path="/reservations" component={Reservations} exact />
